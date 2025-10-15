@@ -12,24 +12,10 @@ from typing import List, Dict, Optional
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 import traceback
-
-try:
-    from pydriller import Repository
-except ImportError:
-    print("❌ PyDriller not installed. Installing...")
-    import subprocess
-    subprocess.check_call(["pip", "install", "pydriller", "tqdm"])
-    from pydriller import Repository
-
-try:
-    from tree_sitter import Language, Parser
-    import tree_sitter_rust
-except ImportError:
-    print("❌ Tree-sitter Rust not installed. Installing...")
-    import subprocess
-    subprocess.check_call(["pip", "install", "tree-sitter", "tree-sitter-rust"])
-    from tree_sitter import Language, Parser
-    import tree_sitter_rust
+from pydriller import Repository
+import subprocess
+from tree_sitter import Language, Parser
+import tree_sitter_rust
 
 import re
 
