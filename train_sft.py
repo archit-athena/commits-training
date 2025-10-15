@@ -39,8 +39,67 @@ def load_jsonl_dataset(dataset_path: str):
         return load_dataset(dataset_path)
 
 
-def format_prompt(prompt: str, response: str = None) -> str:
-    """Format prompt-response pair for Qwen3"""
+def generate_prompt_basic(commit_message: str) -> str:
+    """Generate basic prompt from commit message"""
+    return f"Generate a Rust code patch for the following commit message:\n\n{commit_message}"
+
+
+def generate_prompt_detailed(commit_message: str) -> str:
+    """Generate detailed prompt with context from commit message"""
+    return f"""Given the following commit message, generate the corresponding Rust code changes:
+
+Commit Message: {commit_message}
+
+Please provide the complete code patch that implements this change."""
+
+
+def generate_prompt_contextual(commit_message: str) -> str:
+    """Generate contextual prompt with instructions"""
+    return f"""You are a Rust expert. Based on the commit message below, generate the exact code changes needed:
+
+Commit Message:
+{commit_message}
+
+Provide the code patch with proper Rust syntax and formatting."""
+
+
+def generate_prompt_structured(commit_message: str) -> str:
+    """Generate structured prompt with clear sections"""
+    return f"""Task: Generate Rust code patch from commit message
+
+Commit Message:
+{commit_message}
+
+Requirements:
+- Use idiomatic Rust code
+- Follow best practices
+- Include necessary imports and error handling
+
+Code Patch:"""
+
+
+# Prompt template registry
+PROMPT_TEMPLATES = {
+    'basic': generate_prompt_basic,
+    'detailed': generate_prompt_detailed,
+    'contextual': generate_prompt_contextual,
+    'structured': generate_prompt_structured,
+}
+
+
+def format_prompt(prompt: str, response: str = None, identifier: str = 'basic') -> str:
+    """
+    Format prompt-response pair for Qwen3
+
+    Args:
+        prompt: The input prompt or commit message
+        response: The expected response (code patch)
+        identifier: Template identifier ('basic', 'detailed', 'contextual', 'structured')
+    """
+    # If prompt looks like raw commit message (no formatting), apply template
+    if identifier in PROMPT_TEMPLATES and not prompt.startswith('Generate'):
+        prompt = PROMPT_TEMPLATES[identifier](prompt)
+
     if response:
         # Training format with response
         return f"""<|im_start|>system
@@ -59,11 +118,19 @@ You are a helpful Rust programming assistant that generates code patches based o
 """
 
 
-def tokenize_function(examples, tokenizer, max_length=2048):
-    """Tokenize the dataset"""
-    # Format all examples
+def tokenize_function(examples, tokenizer, max_length=2048, prompt_identifier='basic'):
+    """
+    Tokenize the dataset
+
+    Args:
+        examples: Batch of examples with 'prompt' and 'response' fields
+        tokenizer: Tokenizer instance
+        max_length: Maximum sequence length
+        prompt_identifier: Template identifier for prompt generation
+    """
+    # Format all examples with the specified prompt template
     texts = [
-        format_prompt(prompt, response)
+        format_prompt(prompt, response, identifier=prompt_identifier)
         for prompt, response in zip(examples['prompt'], examples['response'])
     ]
 
