@@ -243,13 +243,13 @@ def main():
         gradient_accumulation_steps=args.gradient_accumulation,
         learning_rate=args.learning_rate,
         weight_decay=0.01,
-        warmup_steps=100,
+        warmup_steps=50,
         lr_scheduler_type="cosine",
-        logging_steps=10,
+        logging_steps=1,
         save_strategy="steps",
-        save_steps=200,
+        save_steps=300,
         eval_strategy="steps",
-        eval_steps=200,
+        eval_steps=80,
         save_total_limit=3,
         fp16=False,
         bf16=True,
@@ -291,3 +291,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
