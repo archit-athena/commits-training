@@ -33,38 +33,38 @@ def load_jsonl_dataset(dataset_path: str):
 
 
 def generate_prompt_basic(commit_message: str) -> str:
-    return f"Generate a Rust code patch for the following commit message:\n\n{commit_message}"
+    return f"Generate the Rust identifiers (functions, structs, enums, traits, impls, mods) that need to be changed based on the following commit message:\n\n{commit_message}"
 
 
 def generate_prompt_detailed(commit_message: str) -> str:
-    return f"""Given the following commit message, generate the corresponding Rust code changes:
+    return f"""Given the following commit message, identify which Rust identifiers need to be modified:
 
 Commit Message: {commit_message}
 
-Please provide the complete code patch that implements this change."""
+Please list the identifiers (functions, structs, enums, traits, impl blocks, modules) that should be added, removed, or modified."""
 
 
 def generate_prompt_contextual(commit_message: str) -> str:
-    return f"""You are a Rust expert. Based on the commit message below, generate the exact code changes needed:
+    return f"""You are a Rust expert. Based on the commit message below, determine which identifiers need to be changed:
 
 Commit Message:
 {commit_message}
 
-Provide the code patch with proper Rust syntax and formatting."""
+Provide the list of identifiers (functions, structs, enums, traits, impls, mods) that need to be added or removed."""
 
 
 def generate_prompt_structured(commit_message: str) -> str:
-    return f"""Task: Generate Rust code patch from commit message
+    return f"""Task: Identify Rust identifiers to change based on commit message
 
 Commit Message:
 {commit_message}
 
 Requirements:
-- Use idiomatic Rust code
-- Follow best practices
-- Include necessary imports and error handling
+- List all identifiers that need to be added or removed
+- Include functions, structs, enums, traits, impl blocks, and modules
+- Specify whether each identifier should be added or removed
 
-Code Patch:"""
+Identifiers:"""
 
 
 PROMPT_TEMPLATES = {
@@ -81,14 +81,14 @@ def format_prompt(prompt: str, response: str = None, identifier: str = 'basic') 
 
     if response:
         return f"""<|im_start|>system
-You are a helpful Rust programming assistant that generates code patches based on commit messages.<|im_end|>
+You are a helpful Rust programming assistant that identifies which identifiers (functions, structs, enums, traits, impl blocks, modules) need to be changed based on commit messages.<|im_end|>
 <|im_start|>user
 {prompt}<|im_end|>
 <|im_start|>assistant
 {response}<|im_end|>"""
     else:
         return f"""<|im_start|>system
-You are a helpful Rust programming assistant that generates code patches based on commit messages.<|im_end|>
+You are a helpful Rust programming assistant that identifies which identifiers (functions, structs, enums, traits, impl blocks, modules) need to be changed based on commit messages.<|im_end|>
 <|im_start|>user
 {prompt}<|im_end|>
 <|im_start|>assistant
