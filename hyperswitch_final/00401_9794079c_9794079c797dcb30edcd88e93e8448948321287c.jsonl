@@ -1,0 +1,1 @@
+{"prompt": "fix(payment_method): do not save card in locker in case of error from connector (#1341)", "response": "Files to modify:\n\n\n**tokenization.rs**\n  Modify existing code"}

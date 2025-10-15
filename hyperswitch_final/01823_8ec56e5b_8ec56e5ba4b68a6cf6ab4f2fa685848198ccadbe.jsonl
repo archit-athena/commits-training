@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): [STRIPE] Remove sofort bank redirect from stripe (#7733)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Remove:\n    - enum: pub::BankSpecificData"}

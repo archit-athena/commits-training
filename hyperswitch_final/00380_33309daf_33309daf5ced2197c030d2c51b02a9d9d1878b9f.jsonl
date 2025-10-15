@@ -1,0 +1,1 @@
+{"prompt": "feat(connector): [Adyen] Add support for Samsung Pay (#1525)", "response": "Files to modify:\n\n\n**enums.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**openapi.rs**\n  Modify existing code\n\n**enums.rs**\n  Modify existing code"}

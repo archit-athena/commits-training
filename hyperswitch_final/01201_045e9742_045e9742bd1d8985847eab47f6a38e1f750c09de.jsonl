@@ -1,0 +1,1 @@
+{"prompt": "fix(auth_methods): Add checks for duplicate `auth_method` in create API (#5161)", "response": "Files to modify:\n\n\n**user.rs**\n  Modify existing code\n\n**user.rs**\n  Modify existing code\n\n**user.rs**\n  Modify existing code"}

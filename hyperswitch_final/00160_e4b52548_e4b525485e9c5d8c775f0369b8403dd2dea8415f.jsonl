@@ -1,0 +1,1 @@
+{"prompt": "refactor: use generic function to push to drainer (#496)", "response": "Files to modify:\n\n\n**payment_attempt.rs**\n  Modify existing code\n\n**payment_intent.rs**\n  Modify existing code\n\n**refund.rs**\n  Modify existing code\n\n**services.rs**\n  Add:\n    - function: pub::push_to_drainer_stream"}

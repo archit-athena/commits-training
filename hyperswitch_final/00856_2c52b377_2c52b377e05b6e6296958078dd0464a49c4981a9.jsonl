@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [Stripe] capture error message and error code for failed payment, capture, void and refunds (#3237)\n\nCo-authored-by: Sahkal Poddar <sahkal.poddar@juspay.in>\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

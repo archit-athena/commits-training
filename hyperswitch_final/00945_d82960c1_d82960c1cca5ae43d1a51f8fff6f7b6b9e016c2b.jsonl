@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [cybersource] update mandate condition (#4048)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

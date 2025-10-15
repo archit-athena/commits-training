@@ -1,0 +1,1 @@
+{"prompt": "chore: generate openapi specs for organization endpoint for v1 and v2 (#5648)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**openapi_v2.rs**\n  Modify existing code\n\n**organization.rs**\n  Modify existing code"}

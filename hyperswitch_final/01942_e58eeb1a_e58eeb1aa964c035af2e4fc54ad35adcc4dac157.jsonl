@@ -1,0 +1,1 @@
+{"prompt": "ci(postman): add tunnel collection to postman tests (#8269)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**newman_runner.rs**\n  Modify existing code"}

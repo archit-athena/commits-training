@@ -1,0 +1,1 @@
+{"prompt": "feat(payment_methods): add payment-methods/filter endpoint to list countries and currencies for connector payment method in v2 (#8978)", "response": "Files to modify:\n\n\n**app.rs**\n  Modify existing code\n\n**payment_methods.rs**\n  Add:\n    - function: pub::list_countries_currencies_for_connector_payment_method"}

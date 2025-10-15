@@ -1,0 +1,1 @@
+{"prompt": "refactor(refunds_v2): Add feature flags and db methods to non kv config (#7987)", "response": "Files to modify:\n\n\n**refund.rs**\n  Add:\n    - function: private::find_refund_by_id\n    - function: private::update_refund\n    - function: private::filter_refund_by_constraints\n    - function: private::get_total_count_of_refunds"}

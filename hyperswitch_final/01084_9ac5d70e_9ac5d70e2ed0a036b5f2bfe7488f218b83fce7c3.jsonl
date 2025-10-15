@@ -1,0 +1,1 @@
+{"prompt": "chore: add deprecated flag to soon to be deprecated fields in payment request and response (#4261)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "fix(docs): open-api fix for payment response (#5103)\n\nCo-authored-by: Chikke Srujan <chikke.srujan@Chikke-Srujan-G961M60MK7.local>", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**openapi.rs**\n  Modify existing code"}

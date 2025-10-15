@@ -1,0 +1,1 @@
+{"prompt": "test: move Postman collections to directory structure (#1995)\n\nCo-authored-by: Pa1NarK <69745008+pixincreate@users.noreply.github.com>", "response": "Files to modify:\n\n\n**main.rs**\n  Modify existing code"}

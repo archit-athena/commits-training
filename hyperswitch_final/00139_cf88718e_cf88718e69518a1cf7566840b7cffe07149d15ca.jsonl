@@ -1,0 +1,1 @@
+{"prompt": "docs: request and response in refund routes (#423)", "response": "Files to modify:\n\n\n**refunds.rs**\n  Modify existing code\n\n**openapi.rs**\n  Modify existing code\n\n**refunds.rs**\n  Modify existing code"}

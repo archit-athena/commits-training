@@ -1,0 +1,1 @@
+{"prompt": "refactor(card_details): added missing card data fields for connectors (#4571)", "response": "Files to modify:\n\n\n**defaults.rs**\n  Modify existing code"}

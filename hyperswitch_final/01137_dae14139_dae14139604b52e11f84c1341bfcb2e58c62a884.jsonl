@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): [KLARNA] Add dynamic fields for klarna payment method (#4891)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**enums.rs**\n  Modify existing code\n\n**defaults.rs**\n  Modify existing code"}

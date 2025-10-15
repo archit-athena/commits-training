@@ -1,0 +1,1 @@
+{"prompt": "refactor(db): Add TenantID field to KafkaEvent struct (#4598)\n\nCo-authored-by: Sampras Lopes <sampras.lopes@juspay.in>", "response": "Files to modify:\n\n\n**kafka_store.rs**\n  Modify existing code\n\n**kafka.rs**\n  Modify existing code"}

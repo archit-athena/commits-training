@@ -1,0 +1,1 @@
+{"prompt": "refactor(compatibility): refactor stripe compatibility routes using `web::resource` (#1022)", "response": "Files to modify:\n\n\n**app.rs**\n  Modify existing code\n\n**customers.rs**\n  Modify existing code\n\n**payment_intents.rs**\n  Modify existing code\n\n**refunds.rs**\n  Modify existing code\n\n**setup_intents.rs**\n  Modify existing code"}

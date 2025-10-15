@@ -1,0 +1,1 @@
+{"prompt": "fix: remove and/or resolve `fixme`s & `todo`s in stripe compatibility (#218)", "response": "Files to modify:\n\n\n**errors.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code"}

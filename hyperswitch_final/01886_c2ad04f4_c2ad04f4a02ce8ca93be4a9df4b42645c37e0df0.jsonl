@@ -1,0 +1,1 @@
+{"prompt": "refactor(routing): Add connectors from current active routing algorithm before adding fallback connectors (#7921)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code"}

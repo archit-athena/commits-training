@@ -1,0 +1,1 @@
+{"prompt": "refactor: use frunk deriving mechanisms to reduce boilerplate (#137)\n\nCo-authored-by: Arun Raj M <jarnura47@gmail.com>", "response": "Files to modify:\n\n\n**enums.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**address.rs**\n  Modify existing code\n\n**enums.rs**\n  Modify existing code"}

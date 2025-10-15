@@ -1,0 +1,1 @@
+{"prompt": "refactor: [Checkout] change payment and webhooks API contract (#4023)", "response": "Files to modify:\n\n\n**checkout.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

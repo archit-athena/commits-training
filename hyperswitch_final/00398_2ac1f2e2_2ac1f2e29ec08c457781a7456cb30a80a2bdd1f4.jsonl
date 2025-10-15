@@ -1,0 +1,1 @@
+{"prompt": "feat(db): implement `ConfigInterface` for `MockDb` (#1586)", "response": "Files to modify:\n\n\n**db.rs**\n  Modify existing code\n\n**configs.rs**\n  Modify existing code\n\n**configs.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "fix(db): merchant_account cache invalidation based on publishable_key (#2365)", "response": "Files to modify:\n\n\n**merchant_account.rs**\n  Add:\n    - function: private::publish_and_redact_merchant_account_cache"}

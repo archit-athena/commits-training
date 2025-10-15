@@ -1,0 +1,1 @@
+{"prompt": "fix(users): send correct `user_role` values in `switch_merchant` response (#3167)", "response": "Files to modify:\n\n\n**user.rs**\n  Modify existing code\n\n**user.rs**\n  Modify existing code"}

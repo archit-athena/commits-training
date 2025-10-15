@@ -1,0 +1,1 @@
+{"prompt": "feat: cache reverse lookup fetches on redis (#719)", "response": "Files to modify:\n\n\n**cache.rs**\n  Modify existing code\n\n**payment_attempt.rs**\n  Modify existing code\n\n**refund.rs**\n  Modify existing code\n\n**reverse_lookup.rs**\n  Modify existing code"}

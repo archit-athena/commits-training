@@ -1,0 +1,1 @@
+{"prompt": "fix(api_response): ghost payment_method_billing being populated in the response (#4085)", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

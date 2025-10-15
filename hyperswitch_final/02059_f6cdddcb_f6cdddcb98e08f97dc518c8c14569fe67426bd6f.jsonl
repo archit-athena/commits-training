@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [Worldpay] handle multiple ddc submission for CompleteAuthorize (#8741)", "response": "Files to modify:\n\n\n**worldpay.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**api.rs**\n  Modify existing code"}

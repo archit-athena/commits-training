@@ -1,0 +1,1 @@
+{"prompt": "feat(router): implement `PaymentMethodInterface` for `MockDB` (#1535)", "response": "Files to modify:\n\n\n**db.rs**\n  Modify existing code\n\n**payment_method.rs**\n  Modify existing code\n\n**payment_method.rs**\n  Modify existing code"}

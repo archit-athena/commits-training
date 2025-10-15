@@ -1,0 +1,1 @@
+{"prompt": "feat(user_role): Insert V2 user_roles (#5607)", "response": "Files to modify:\n\n\n**user_role.rs**\n  Add:\n    - function: pub::insert_multiple_user_roles\n\n**user.rs**\n  Modify existing code\n\n**kafka_store.rs**\n  Modify existing code\n\n**user_role.rs**\n  Add:\n    - function: pub::insert_multiple_user_roles\n\n**user.rs**\n  Modify existing code"}

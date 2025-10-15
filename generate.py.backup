@@ -1,0 +1,611 @@
+#!/usr/bin/env python3
+"""
+extract_commits.py - Robust and fast extraction using PyDriller
+"""
+
+import argparse
+import json
+import shutil
+from pathlib import Path
+from datetime import datetime
+from typing import List, Dict, Optional
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from tqdm import tqdm
+import traceback
+
+try:
+    from pydriller import Repository
+except ImportError:
+    print("❌ PyDriller not installed. Installing...")
+    import subprocess
+    subprocess.check_call(["pip", "install", "pydriller", "tqdm"])
+    from pydriller import Repository
+
+try:
+    from tree_sitter import Language, Parser
+    import tree_sitter_rust
+except ImportError:
+    print("❌ Tree-sitter Rust not installed. Installing...")
+    import subprocess
+    subprocess.check_call(["pip", "install", "tree-sitter", "tree-sitter-rust"])
+    from tree_sitter import Language, Parser
+    import tree_sitter_rust
+
+import re
+
+
+class RustIdentifierParser:
+    """Parse Rust code to extract high-level identifiers (functions, structs, enums, traits, impl blocks)"""
+
+    def __init__(self):
+        # Use Language.build_library for newer tree-sitter API
+        try:
+            # Try new API (tree-sitter >= 0.21)
+            RUST_LANGUAGE = Language(tree_sitter_rust.language())
+            self.parser = Parser(RUST_LANGUAGE)
+        except TypeError:
+            # Fall back to old API
+            self.parser = Parser()
+            self.parser.set_language(tree_sitter_rust.language())
+
+    def is_rust_file(self, filename: str) -> bool:
+        """Check if file is a Rust file"""
+        return Path(filename).suffix.lower() == '.rs'
+
+    def extract_identifiers(self, code: str) -> Dict[str, List[str]]:
+        """Extract high-level identifiers from Rust code"""
+        try:
+            tree = self.parser.parse(bytes(code, 'utf8'))
+            identifiers = {
+                'functions': [],
+                'structs': [],
+                'enums': [],
+                'traits': [],
+                'impls': [],
+                'mods': []
+            }
+
+            def traverse(node):
+                # Extract functions
+                if node.type == 'function_item':
+                    name_node = node.child_by_field_name('name')
+                    if name_node:
+                        func_name = name_node.text.decode('utf8')
+                        # Check if it's public
+                        visibility = 'pub' if any(child.type == 'visibility_modifier' for child in node.children) else 'private'
+                        identifiers['functions'].append(f"{visibility}::{func_name}")
+
+                # Extract structs
+                elif node.type == 'struct_item':
+                    name_node = node.child_by_field_name('name')
+                    if name_node:
+                        struct_name = name_node.text.decode('utf8')
+                        visibility = 'pub' if any(child.type == 'visibility_modifier' for child in node.children) else 'private'
+                        identifiers['structs'].append(f"{visibility}::{struct_name}")
+
+                # Extract enums
+                elif node.type == 'enum_item':
+                    name_node = node.child_by_field_name('name')
+                    if name_node:
+                        enum_name = name_node.text.decode('utf8')
+                        visibility = 'pub' if any(child.type == 'visibility_modifier' for child in node.children) else 'private'
+                        identifiers['enums'].append(f"{visibility}::{enum_name}")
+
+                # Extract traits
+                elif node.type == 'trait_item':
+                    name_node = node.child_by_field_name('name')
+                    if name_node:
+                        trait_name = name_node.text.decode('utf8')
+                        visibility = 'pub' if any(child.type == 'visibility_modifier' for child in node.children) else 'private'
+                        identifiers['traits'].append(f"{visibility}::{trait_name}")
+
+                # Extract impl blocks
+                elif node.type == 'impl_item':
+                    type_node = node.child_by_field_name('type')
+                    trait_node = node.child_by_field_name('trait')
+                    if type_node:
+                        impl_name = type_node.text.decode('utf8')
+                        if trait_node:
+                            trait_name = trait_node.text.decode('utf8')
+                            identifiers['impls'].append(f"impl {trait_name} for {impl_name}")
+                        else:
+                            identifiers['impls'].append(f"impl {impl_name}")
+
+                # Extract modules
+                elif node.type == 'mod_item':
+                    name_node = node.child_by_field_name('name')
+                    if name_node:
+                        mod_name = name_node.text.decode('utf8')
+                        visibility = 'pub' if any(child.type == 'visibility_modifier' for child in node.children) else 'private'
+                        identifiers['mods'].append(f"{visibility}::{mod_name}")
+
+                for child in node.children:
+                    traverse(child)
+
+            traverse(tree.root_node)
+            return identifiers
+        except Exception as e:
+            return {
+                'functions': [],
+                'structs': [],
+                'enums': [],
+                'traits': [],
+                'impls': [],
+                'mods': []
+            }
+
+
+class RobustGitExtractor:
+    def __init__(self, repo_url: str, output_dir: str = "commits_export",
+                 branch: Optional[str] = None, format: str = "patch",
+                 max_workers: int = 1, min_lines: int = 10):  # Add min_lines parameter
+        self.repo_url = repo_url
+        self.output_dir = Path(output_dir)
+        self.branch = branch
+        self.format = format
+        self.max_workers = max_workers
+        self.min_lines = min_lines  # Minimum lines changed to include commit
+        self.errors = []
+        self.identifier_parser = RustIdentifierParser()
+        self.skipped_commits = 0
+
+    def get_full_context_diff(self, modification) -> str:
+        """Get diff with full function context (more lines)"""
+        try:
+            # Try to get source code with context
+            if modification.source_code and modification.source_code_before:
+                # Build a more complete diff showing full context
+                return modification.diff
+            return modification.diff if modification.diff else ""
+        except:
+            return modification.diff if modification.diff else ""
+
+    def parse_diff_for_changes(self, diff_text: str) -> Dict[str, List[str]]:
+        """Parse diff to extract added and removed lines"""
+        added_lines = []
+        removed_lines = []
+
+        for line in diff_text.split('\n'):
+            if line.startswith('+') and not line.startswith('+++'):
+                added_lines.append(line[1:].strip())
+            elif line.startswith('-') and not line.startswith('---'):
+                removed_lines.append(line[1:].strip())
+
+        return {
+            'added_lines': added_lines,
+            'removed_lines': removed_lines
+        }
+
+    def get_commit_info(self, commit) -> Optional[Dict[str, str]]:
+        """Get detailed information about a commit with error handling"""
+        try:
+            # Filter commits by minimum lines changed
+            total_lines_changed = commit.insertions + commit.deletions
+            if total_lines_changed < self.min_lines:
+                self.skipped_commits += 1
+                return None
+
+            # Get files changed and their diffs
+            files_changed = []
+            patch_parts = []
+            rust_files_info = []
+
+            for modification in commit.modified_files:
+                try:
+                    # Use full path instead of just filename
+                    filename = modification.new_path or modification.old_path or modification.filename
+                    files_changed.append(filename)
+
+                    # Build patch with full context
+                    if modification.diff:
+                        patch_parts.append(f"diff --git a/{modification.old_path or modification.new_path} b/{modification.new_path or modification.old_path}")
+
+                        # Try to include more context by adding source code
+                        if modification.source_code_before and modification.source_code:
+                            # Create a more complete diff showing before and after
+                            patch_parts.append(f"--- a/{modification.old_path or modification.new_path}")
+                            patch_parts.append(f"+++ b/{modification.new_path or modification.old_path}")
+                            patch_parts.append(modification.diff)
+                        else:
+                            patch_parts.append(modification.diff)
+
+                        # Parse Rust files for identifier changes
+                        if self.identifier_parser.is_rust_file(filename):
+                            diff_changes = self.parse_diff_for_changes(modification.diff)
+
+                            # Extract identifiers from added code
+                            added_code = '\n'.join(diff_changes['added_lines'])
+                            identifiers_added = self.identifier_parser.extract_identifiers(added_code)
+
+                            # Extract identifiers from removed code
+                            removed_code = '\n'.join(diff_changes['removed_lines'])
+                            identifiers_removed = self.identifier_parser.extract_identifiers(removed_code)
+
+                            rust_files_info.append({
+                                'filename': filename,
+                                'added': identifiers_added,
+                                'removed': identifiers_removed,
+                                'lines_added': len(diff_changes['added_lines']),
+                                'lines_removed': len(diff_changes['removed_lines'])
+                            })
+
+                except Exception as e:
+                    # Skip files that cause issues
+                    continue
+
+            patch = '\n'.join(patch_parts) if patch_parts else "No diff available"
+
+            info = {
+                'hash': commit.hash,
+                'short_hash': commit.hash[:8],
+                'author_name': commit.author.name,
+                'author_email': commit.author.email,
+                'date': commit.author_date.isoformat(),
+                'committer_name': commit.committer.name,
+                'committer_email': commit.committer.email,
+                'committer_date': commit.committer_date.isoformat(),
+                'subject': commit.msg.split('\n')[0] if commit.msg else '',
+                'body': '\n'.join(commit.msg.split('\n')[1:]).strip() if commit.msg and len(commit.msg.split('\n')) > 1 else '',
+                'patch': patch,
+                'files_changed': files_changed,
+                'rust_files': rust_files_info,
+                'insertions': commit.insertions,
+                'deletions': commit.deletions,
+                'lines_changed': total_lines_changed,
+                'files_count': commit.files,
+                'in_main_branch': commit.in_main_branch,
+                'merge': commit.merge,
+                'parents': commit.parents if commit.parents else []
+            }
+            return info
+        except Exception as e:
+            error_msg = f"Error processing commit {getattr(commit, 'hash', 'unknown')[:8]}: {str(e)}"
+            self.errors.append(error_msg)
+            return None
+
+    def save_as_patch(self, commit_info: Dict[str, str], filename: Path):
+        """Save commit as a patch file"""
+        try:
+            with open(filename, 'w', encoding='utf-8', errors='replace') as f:
+                f.write(f"From {commit_info['hash']} Mon Sep 17 00:00:00 2001\n")
+                f.write(f"From: {commit_info['author_name']} <{commit_info['author_email']}>\n")
+                f.write(f"Date: {commit_info['date']}\n")
+                f.write(f"Subject: [PATCH] {commit_info['subject']}\n\n")
+                if commit_info['body']:
+                    f.write(f"{commit_info['body']}\n\n")
+                f.write("---\n")
+                f.write(f" {commit_info['files_count']} files changed, {commit_info['insertions']} insertions(+), {commit_info['deletions']} deletions(-)\n")
+                f.write("\n")
+                f.write(commit_info['patch'])
+                f.write("\n--\n")
+        except Exception as e:
+            print(f"Error saving patch {filename}: {e}")
+
+    def save_as_json(self, commit_info: Dict[str, str], filename: Path):
+        """Save commit as JSON with identifier metadata"""
+        try:
+            # Create structured JSON with identifier information
+            json_data = {
+                'commit': {
+                    'hash': commit_info['hash'],
+                    'short_hash': commit_info['short_hash'],
+                    'author': {
+                        'name': commit_info['author_name'],
+                        'email': commit_info['author_email'],
+                        'date': commit_info['date']
+                    },
+                    'committer': {
+                        'name': commit_info['committer_name'],
+                        'email': commit_info['committer_email'],
+                        'date': commit_info['committer_date']
+                    },
+                    'message': {
+                        'subject': commit_info['subject'],
+                        'body': commit_info['body']
+                    },
+                    'metadata': {
+                        'files_count': commit_info['files_count'],
+                        'insertions': commit_info['insertions'],
+                        'deletions': commit_info['deletions'],
+                        'lines_changed': commit_info['lines_changed'],
+                        'merge': commit_info['merge'],
+                        'in_main_branch': commit_info['in_main_branch']
+                    }
+                },
+                'files_changed': commit_info['files_changed'],
+                'rust_changes': commit_info.get('rust_files', []),
+                'summary': {
+                    'total_rust_files': len(commit_info.get('rust_files', [])),
+                    'identifiers_added': self._count_identifiers([f['added'] for f in commit_info.get('rust_files', [])]),
+                    'identifiers_removed': self._count_identifiers([f['removed'] for f in commit_info.get('rust_files', [])])
+                }
+            }
+
+            with open(filename, 'w', encoding='utf-8', errors='replace') as f:
+                json.dump(json_data, f, indent=2, ensure_ascii=False)
+
+            # Save patch separately
+            patch_file = filename.with_suffix('.patch')
+            with open(patch_file, 'w', encoding='utf-8', errors='replace') as f:
+                f.write(commit_info['patch'])
+        except Exception as e:
+            print(f"Error saving JSON {filename}: {e}")
+
+    def _count_identifiers(self, identifier_list: List[Dict]) -> Dict[str, int]:
+        """Count total identifiers by type"""
+        counts = {'functions': 0, 'structs': 0, 'enums': 0, 'traits': 0, 'impls': 0, 'mods': 0}
+        for identifiers in identifier_list:
+            for key in counts:
+                counts[key] += len(identifiers.get(key, []))
+        return counts
+
+    def save_as_sft(self, commit_info: Dict[str, str], filename: Path):
+        """Save commit as SFT-style prompt-response pair (JSONL format)"""
+        try:
+            # Format: commit message = prompt
+            prompt = commit_info['subject']
+            if commit_info['body']:
+                prompt += f"\n\n{commit_info['body']}"
+
+            # Get all Rust files from the commit
+            all_files = commit_info.get('files_changed', [])
+            rust_files_list = [f for f in all_files if self.identifier_parser.is_rust_file(f)]
+
+            # Format: response = files and identifiers that need to be changed
+            rust_files_with_info = commit_info.get('rust_files', [])
+
+            response_parts = []
+            response_parts.append("Files to modify:\n")
+
+            for rust_filename in rust_files_list:
+                response_parts.append(f"\n**{rust_filename}**")
+
+                # Try to find identifier info for this file
+                file_info = next((rf for rf in rust_files_with_info if rf['filename'] == rust_filename), None)
+
+                if file_info:
+                    added = file_info['added']
+                    removed = file_info['removed']
+                    changes = []
+
+                    # Removals
+                    if any(removed.values()):
+                        removed_items = []
+                        for key, items in removed.items():
+                            if items:
+                                removed_items.extend([f"{key[:-1]}: {item}" for item in items])
+                        if removed_items:
+                            changes.append(f"  Remove:\n    - " + "\n    - ".join(removed_items))
+
+                    # Additions
+                    if any(added.values()):
+                        added_items = []
+                        for key, items in added.items():
+                            if items:
+                                added_items.extend([f"{key[:-1]}: {item}" for item in items])
+                        if added_items:
+                            changes.append(f"  Add:\n    - " + "\n    - ".join(added_items))
+
+                    if changes:
+                        response_parts.append("\n".join(changes))
+                    else:
+                        response_parts.append("  Modify existing code")
+                else:
+                    # No identifier info available, just show file needs modification
+                    response_parts.append("  Modify existing code")
+
+            response = "\n".join(response_parts)
+
+            # Create SFT entry
+            sft_entry = {
+                'prompt': prompt.strip(),
+                'response': response.strip(),
+            }
+
+            # Save as JSONL (one JSON object per line)
+            with open(filename, 'w', encoding='utf-8', errors='replace') as f:
+                json.dump(sft_entry, f, ensure_ascii=False)
+                f.write('\n')
+
+        except Exception as e:
+            print(f"Error saving SFT format {filename}: {e}")
+
+    def create_index(self, commits_info: List[Dict[str, str]]):
+        """Create an index file with all commits"""
+        try:
+            # Create CSV index
+            csv_file = self.output_dir / "index.csv"
+            with open(csv_file, 'w', encoding='utf-8', errors='replace') as f:
+                f.write("Index,Hash,Short Hash,Author,Email,Date,Subject,Files Changed,Insertions,Deletions,Merge\n")
+                for idx, info in enumerate(commits_info, 1):
+                    subject = info['subject'].replace('"', '""').replace('\n', ' ')[:200]
+                    f.write(f'{idx},"{info["hash"]}","{info["short_hash"]}","{info["author_name"]}","{info["author_email"]}","{info["date"]}","{subject}",{info["files_count"]},{info["insertions"]},{info["deletions"]},{info["merge"]}\n')
+
+            # Create Markdown index
+            md_file = self.output_dir / "INDEX.md"
+            with open(md_file, 'w', encoding='utf-8', errors='replace') as f:
+                f.write(f"# Commit History: {self.repo_url}\n\n")
+                f.write(f"**Extracted:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+                f.write(f"**Total Commits:** {len(commits_info)}\n\n")
+                f.write(f"**Branch:** {self.branch or 'all branches'}\n\n")
+                
+                # Summary statistics
+                total_insertions = sum(c['insertions'] for c in commits_info)
+                total_deletions = sum(c['deletions'] for c in commits_info)
+                total_files = sum(c['files_count'] for c in commits_info)
+                merge_count = sum(1 for c in commits_info if c['merge'])
+                
+                f.write(f"## Summary Statistics\n\n")
+                f.write(f"- **Total Insertions:** +{total_insertions:,}\n")
+                f.write(f"- **Total Deletions:** -{total_deletions:,}\n")
+                f.write(f"- **Total Files Changed:** {total_files:,}\n")
+                f.write(f"- **Merge Commits:** {merge_count:,}\n\n")
+                
+                if self.errors:
+                    f.write(f"## Errors\n\n")
+                    f.write(f"- **Failed commits:** {len(self.errors)}\n\n")
+                
+                f.write("---\n\n")
+
+                for idx, info in enumerate(commits_info, 1):
+                    merge_tag = " [MERGE]" if info['merge'] else ""
+                    f.write(f"## {idx}. {info['subject']}{merge_tag}\n\n")
+                    f.write(f"- **Commit:** `{info['short_hash']}`\n")
+                    f.write(f"- **Author:** {info['author_name']} <{info['author_email']}>\n")
+                    f.write(f"- **Date:** {info['date']}\n")
+                    f.write(f"- **Changes:** {info['files_count']} files (+{info['insertions']}/-{info['deletions']})\n\n")
+
+            print(f"📄 Created index files: {csv_file.name} and {md_file.name}")
+            
+        except Exception as e:
+            print(f"Error creating index: {e}")
+
+    def create_error_log(self):
+        """Create a log file for errors"""
+        if self.errors:
+            error_file = self.output_dir / "errors.log"
+            with open(error_file, 'w', encoding='utf-8') as f:
+                f.write(f"Extraction Errors Log\n")
+                f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                f.write(f"Total Errors: {len(self.errors)}\n")
+                f.write("=" * 80 + "\n\n")
+                for error in self.errors:
+                    f.write(f"{error}\n")
+            print(f"⚠️  Error log created: {error_file.name} ({len(self.errors)} errors)")
+
+    def extract(self):
+        """Main extraction process"""
+        try:
+            # Setup
+            self.output_dir.mkdir(parents=True, exist_ok=True)
+            
+            print(f"📦 Analyzing repository: {self.repo_url}")
+            
+            # Use PyDriller to traverse commits
+            if self.branch:
+                repo = Repository(self.repo_url, only_in_branch=self.branch)
+            else:
+                repo = Repository(self.repo_url)
+
+            # Count total commits first
+            print(f"🔍 Counting commits...")
+            if self.branch:
+                total_commits = sum(1 for _ in Repository(self.repo_url, only_in_branch=self.branch).traverse_commits())
+            else:
+                total_commits = sum(1 for _ in Repository(self.repo_url).traverse_commits())
+            
+            print(f"📊 Found {total_commits} commits\n")
+            print(f"⚡ Processing commits...\n")
+
+            # Process commits with progress bar
+            commits_info = []
+            idx = 1
+            
+            with tqdm(total=total_commits, desc="Extracting", unit="commit") as pbar:
+                for commit in repo.traverse_commits():
+                    try:
+                        commit_info = self.get_commit_info(commit)
+                        
+                        if commit_info:
+                            # For SFT format, skip if no Rust files in the commit at all
+                            has_rust_files = any(
+                                self.identifier_parser.is_rust_file(f)
+                                for f in commit_info.get('files_changed', [])
+                            )
+                            if self.format == "sft" and not has_rust_files:
+                                continue
+
+                            commits_info.append(commit_info)
+
+                            # Save individual file
+                            base_filename = f"{idx:05d}_{commit_info['short_hash']}_{commit_info['hash']}"
+
+                            if self.format == "patch":
+                                filename = self.output_dir / f"{base_filename}.patch"
+                                self.save_as_patch(commit_info, filename)
+                            elif self.format == "json":
+                                filename = self.output_dir / f"{base_filename}.json"
+                                self.save_as_json(commit_info, filename)
+                            elif self.format == "sft":
+                                filename = self.output_dir / f"{base_filename}.jsonl"
+                                self.save_as_sft(commit_info, filename)
+
+                            idx += 1
+                    
+                    except Exception as e:
+                        error_msg = f"Unexpected error processing commit: {str(e)}"
+                        self.errors.append(error_msg)
+                    
+                    pbar.update(1)
+
+            # Create index
+            if commits_info:
+                print(f"\n📝 Creating index files...")
+                self.create_index(commits_info)
+
+            # Create error log if there were errors
+            if self.errors:
+                self.create_error_log()
+
+            print(f"\n✅ Extraction complete!")
+            print(f"📁 Output directory: {self.output_dir.absolute()}")
+            print(f"📝 Successfully processed: {len(commits_info)} commits")
+            print(f"⏭️  Skipped commits (< {self.min_lines} lines): {self.skipped_commits}")
+            if self.errors:
+                print(f"⚠️  Failed commits: {len(self.errors)}")
+            print(f"💾 Total size: {sum(f.stat().st_size for f in self.output_dir.glob('*') if f.is_file()) / 1024 / 1024:.2f} MB")
+
+        except Exception as e:
+            print(f"\n❌ Fatal error: {e}")
+            traceback.print_exc()
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Rust-focused Git commit extractor with identifier parsing for SFT datasets",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  # Extract as SFT dataset (prompt-response pairs)
+  %(prog)s https://github.com/juspay/hyperswitch -f sft -m 20
+
+  # Extract as JSON with identifier metadata
+  %(prog)s https://github.com/user/rust-repo -f json -b main
+
+  # Extract patches with minimum 50 lines changed
+  %(prog)s https://github.com/user/rust-repo -f patch -m 50
+        """
+    )
+
+    parser.add_argument("repo_url", help="GitHub repository URL or local path")
+    parser.add_argument("-o", "--output", default="commits_export",
+                       help="Output directory (default: commits_export)")
+    parser.add_argument("-b", "--branch", help="Specific branch to extract (default: all branches)")
+    parser.add_argument("-f", "--format", choices=["patch", "json", "sft"],
+                       default="sft", help="Output format (default: sft)")
+    parser.add_argument("-m", "--min-lines", type=int, default=10,
+                       help="Minimum lines changed to include commit (default: 10)")
+
+    args = parser.parse_args()
+
+    print("=" * 80)
+    print("🦀 Rust Git Commit Extractor with Identifier Parsing")
+    print("=" * 80)
+    print(f"📍 Repository: {args.repo_url}")
+    print(f"📊 Format: {args.format}")
+    print(f"📏 Min lines: {args.min_lines}")
+    print("=" * 80)
+
+    extractor = RobustGitExtractor(
+        repo_url=args.repo_url,
+        output_dir=args.output,
+        branch=args.branch,
+        format=args.format,
+        min_lines=args.min_lines
+    )
+
+    extractor.extract()
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,1 @@
+{"prompt": "chore(config): add support for some more country and currencies for Mifinity Wallet (#5639)", "response": "Files to modify:\n\n\n**defaults.rs**\n  Modify existing code"}

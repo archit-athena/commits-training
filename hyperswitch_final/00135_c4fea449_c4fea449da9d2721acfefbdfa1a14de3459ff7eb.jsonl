@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): change capture status to pending when waiting for settlement (#420)", "response": "Files to modify:\n\n\n**cybersource.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - function: private::get_payment_status"}

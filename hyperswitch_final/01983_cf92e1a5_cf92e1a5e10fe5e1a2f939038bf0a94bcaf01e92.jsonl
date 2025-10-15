@@ -1,0 +1,1 @@
+{"prompt": "feat(connector): [jpmorgan] implement refund flow (#8436)", "response": "Files to modify:\n\n\n**jpmorgan.rs**\n  Modify existing code\n\n**transformers.rs**\n  Remove:\n    - struct: pub::MerchantSoftware\n    - struct: pub::RefundResponse"}

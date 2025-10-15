@@ -1,0 +1,1 @@
+{"prompt": "feat(connector): [shift4] Blik, Klarna, Bitpay PMs added (#8478)", "response": "Files to modify:\n\n\n**shift4.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

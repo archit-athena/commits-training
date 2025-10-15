@@ -1,0 +1,1 @@
+{"prompt": "refactor(payment_methods): unify locker api function call (#5863)", "response": "Files to modify:\n\n\n**admin.rs**\n  Modify existing code\n\n**errors.rs**\n  Modify existing code\n\n**cards.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**helpers.rs**\n  Modify existing code\n\n**lib.rs**\n  Modify existing code"}
