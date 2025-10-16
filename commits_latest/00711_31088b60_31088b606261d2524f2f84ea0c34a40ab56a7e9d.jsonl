@@ -1,0 +1,1 @@
+{"prompt": "feat(router): send connector timeouts and connection closures as 2xx response instead of giving 5xx response (#2047)", "response": "Files to modify:\n\n\n**consts.rs**\n  Modify existing code\n\n**errors.rs**\n  Add:\n    - function: pub::is_connection_closed\n\n**access_token.rs**\n  Modify existing code\n\n**api.rs**\n  Modify existing code"}

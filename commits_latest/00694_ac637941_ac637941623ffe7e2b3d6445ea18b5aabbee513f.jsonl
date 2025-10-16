@@ -1,0 +1,1 @@
+{"prompt": "fix(locker): accept the incoming token as the basilisk token if it is a mandate payment (#2013)", "response": "Files to modify:\n\n\n**helpers.rs**\n  Modify existing code"}

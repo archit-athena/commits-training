@@ -1,0 +1,1 @@
+{"prompt": "refactor(api_keys): provide identifier for api key in the expiry reminder email (#3888)\n\nCo-authored-by: Chethan <chethan.rao@juspay.in>", "response": "Files to modify:\n\n\n**api_keys.rs**\n  Modify existing code\n\n**api_keys.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code\n\n**api_key_expiry.rs**\n  Modify existing code"}

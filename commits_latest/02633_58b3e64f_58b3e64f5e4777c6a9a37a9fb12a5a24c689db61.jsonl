@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [NETCETERA] add fixes for authentication response fields (#8907)\n\nCo-authored-by: Debarati Ghatak <debarati.ghatak@Debarati-Ghatak-FW569NC29L.local>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code\n\n**netcetera.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

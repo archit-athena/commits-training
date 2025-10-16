@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [Adyen] Add MYR currency config  (#6442)\n\nCo-authored-by: Chikke Srujan <chikke.srujan@Chikke-Srujan-N7WRTY72X7.local>", "response": "Files to modify:\n\n\n**consts.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [ADYEN] field type fixed for required fields (#8997)", "response": "Files to modify:\n\n\n**payment_connector_required_fields.rs**\n  Remove:\n    - function: private::billing_email_name_phone\n  Add:\n    - function: private::billing_email_billing_name\n    - function: private::billing_email_billing_name_phone"}

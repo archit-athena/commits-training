@@ -1,0 +1,1 @@
+{"prompt": "fix(routing): Enable filtering of default connectors for contract based routing (#7420)", "response": "Files to modify:\n\n\n**routing.rs**\n  Modify existing code\n\n**routing.rs**\n  Modify existing code\n\n**routing.rs**\n  Modify existing code\n\n**helpers.rs**\n  Modify existing code"}

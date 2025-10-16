@@ -1,0 +1,1 @@
+{"prompt": "chore(webhooks): ignore payment not found in webhooks (#1886)", "response": "Files to modify:\n\n\n**settings.rs**\n  Add:\n    - struct: pub::WebhookIgnoreErrorSettings\n\n**utils.rs**\n  Modify existing code\n\n**metrics.rs**\n  Modify existing code\n\n**webhooks.rs**\n  Modify existing code"}

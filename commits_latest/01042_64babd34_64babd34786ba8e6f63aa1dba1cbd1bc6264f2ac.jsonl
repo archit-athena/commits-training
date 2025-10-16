@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [NMI] Populating `ErrorResponse` with required fields and Mapping `connector_response_reference_id` (#3214)\n\nCo-authored-by: Prasunna Soppa <prasunna.soppa@juspay.in>", "response": "Files to modify:\n\n\n**nmi.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

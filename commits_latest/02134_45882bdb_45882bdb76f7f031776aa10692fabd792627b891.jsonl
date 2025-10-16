@@ -1,0 +1,1 @@
+{"prompt": "feat(connector): [DATATRANS] Add Support for External 3DS  (#7226)", "response": "Files to modify:\n\n\n**connector_enums.rs**\n  Modify existing code\n\n**datatrans.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - struct: pub::ThreeDSData\n    - enum: pub::ThreeDSecureData"}

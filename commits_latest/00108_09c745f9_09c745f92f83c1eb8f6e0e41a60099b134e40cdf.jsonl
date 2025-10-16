@@ -1,0 +1,1 @@
+{"prompt": "fix: resolve `TODO/FIXME` from `router.routes` (#283)", "response": "Files to modify:\n\n\n**payment_capture.rs**\n  Modify existing code\n\n**metrics.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code"}

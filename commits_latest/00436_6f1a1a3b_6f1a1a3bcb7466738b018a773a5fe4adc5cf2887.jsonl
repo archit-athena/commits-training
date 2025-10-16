@@ -1,0 +1,1 @@
+{"prompt": "feat(db): implement `EventInterface` for `MockDb`  (#1289)\n\nCo-authored-by: Pavlo Kushneryk <pavlo.kushneryk@solidgate.com>", "response": "Files to modify:\n\n\n**db.rs**\n  Modify existing code\n\n**events.rs**\n  Modify existing code"}

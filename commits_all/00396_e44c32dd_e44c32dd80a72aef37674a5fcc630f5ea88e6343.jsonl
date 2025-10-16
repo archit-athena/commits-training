@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): [Shift4] refactor connector authorize request struct  (#1888)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Remove:\n    - enum: pub::Shift4PaymentsRequest\n  Add:\n    - struct: pub::Shift4PaymentsRequest\n    - struct: pub::Cards3DSRequest\n    - enum: pub::Shift4PaymentMethod\n\n**utils.rs**\n  Modify existing code"}

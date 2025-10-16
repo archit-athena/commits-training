@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): [Paypal] Change error message from NotSupported to NotImplemented (#2877)\n\nCo-authored-by: swangi-kumari <swangi.12015941@lpu.in>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [AUTHORIZEDOTNET] Added Invoice Number Fix (#8685)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

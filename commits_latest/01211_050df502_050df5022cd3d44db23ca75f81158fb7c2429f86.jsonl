@@ -1,0 +1,1 @@
+{"prompt": "feat(router): add incoming header request logs (#3939)", "response": "Files to modify:\n\n\n**secrets_transformers.rs**\n  Modify existing code\n\n**settings.rs**\n  Add:\n    - struct: pub::UnmaskedHeaders\n\n**api.rs**\n  Modify existing code"}

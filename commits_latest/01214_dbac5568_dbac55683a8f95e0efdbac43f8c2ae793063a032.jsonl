@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): remove default cases for Authorizedotnet, Braintree and Fiserv Connector (#2796)\n\nCo-authored-by: chikke srujan <121822803+srujanchikke@users.noreply.github.com>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

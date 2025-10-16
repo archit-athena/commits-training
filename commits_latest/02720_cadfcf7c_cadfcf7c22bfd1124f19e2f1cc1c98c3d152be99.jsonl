@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [checkout] Add US Support for Apple Pay and Google Pay + Enhanced Checkout Response Data (#9356)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - struct: pub::PaymentProcessingDetails"}

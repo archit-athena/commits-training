@@ -1,0 +1,1 @@
+{"prompt": "feat(webhooks): webhooks effect tracker (#2260)", "response": "Files to modify:\n\n\n**webhooks.rs**\n  Add:\n    - enum: pub::WebhookResponseTracker\n\n**webhooks.rs**\n  Add:\n    - enum: pub::WebhookResponseTracker\n\n**utils.rs**\n  Modify existing code\n\n**webhooks.rs**\n  Add:\n    - enum: pub::WebhookResponseTracker"}

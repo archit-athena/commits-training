@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [Novalnet] Add mandatory fields for wallets and card in config (#6463)", "response": "Files to modify:\n\n\n**payment_connector_required_fields.rs**\n  Modify existing code"}

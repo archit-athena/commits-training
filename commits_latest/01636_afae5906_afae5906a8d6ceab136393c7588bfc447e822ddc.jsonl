@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): [Itaubank] add dynamic fields for pix (#5419)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**enums.rs**\n  Modify existing code\n\n**defaults.rs**\n  Modify existing code"}

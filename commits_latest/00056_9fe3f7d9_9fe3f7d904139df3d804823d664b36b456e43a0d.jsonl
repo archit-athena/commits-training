@@ -1,0 +1,1 @@
+{"prompt": "Todo redis interface (#136)", "response": "Files to modify:\n\n\n**commands.rs**\n  Add:\n    - function: private::test_consumer_group_create\n    - mod: private::tests\n\n**errors.rs**\n  Modify existing code\n\n**lib.rs**\n  Modify existing code\n\n**types.rs**\n  Add:\n    - function: private::default\n    - impl: impl Default for RedisSettings"}

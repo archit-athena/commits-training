@@ -1,0 +1,1 @@
+{"prompt": "refactor(core): made authenticate_client_secret function public (#1992)", "response": "Files to modify:\n\n\n**helpers.rs**\n  Modify existing code"}

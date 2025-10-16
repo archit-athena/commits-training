@@ -1,0 +1,1 @@
+{"prompt": "feat(connector): [AUTHORIZEDOTNET] Populated merchant required fields in setupmandate flow (#8618)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - struct: pub::ShipToList\n\n**router_request_types.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - struct: pub::ShipToList"}

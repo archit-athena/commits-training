@@ -1,0 +1,1 @@
+{"prompt": "feat(pm_list): add card - credit pm type required field info for connectors (#2075)", "response": "Files to modify:\n\n\n**enums.rs**\n  Modify existing code\n\n**defaults.rs**\n  Modify existing code"}

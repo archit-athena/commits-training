@@ -1,0 +1,1 @@
+{"prompt": "chore(fix): [XENDIT] Make CVV Optional and fix Capture flow (#8921)", "response": "Files to modify:\n\n\n**xendit.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - struct: pub::XenditCaptureResponse"}

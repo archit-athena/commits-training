@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): update error handling for Paypal, Checkout, Mollie to include detailed messages (#1150)", "response": "Files to modify:\n\n\n**checkout.rs**\n  Modify existing code\n\n**mollie.rs**\n  Modify existing code\n\n**paypal.rs**\n  Modify existing code\n\n**checkout.rs**\n  Modify existing code\n\n**paypal.rs**\n  Modify existing code"}

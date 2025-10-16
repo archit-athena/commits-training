@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): [Adyen] Change country and issuer type to Optional for OpenBankingUk (#2993)\n\nCo-authored-by: Arjun Karthik <m.arjunkarthik@gmail.com>\nCo-authored-by: Prasunna Soppa <70575890+prasunna09@users.noreply.github.com>", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

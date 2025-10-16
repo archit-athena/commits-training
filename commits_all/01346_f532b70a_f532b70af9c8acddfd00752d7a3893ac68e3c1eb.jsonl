@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [Nexixpay] handle error code and message in failure response (#7713)\n\nCo-authored-by: Mrudul Vajpayee <mrudul.vajpayee@mrudulvajpayee-JN25VYFTGH.local>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - function: pub::get_error_response"}

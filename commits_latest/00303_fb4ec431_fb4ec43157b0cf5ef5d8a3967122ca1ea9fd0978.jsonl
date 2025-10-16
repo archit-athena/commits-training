@@ -1,0 +1,1 @@
+{"prompt": "deps(common_utils): put the signals module behind a feature flag (#814)", "response": "Files to modify:\n\n\n**lib.rs**\n  Modify existing code\n\n**validation.rs**\n  Modify existing code\n\n**utils.rs**\n  Remove:\n    - function: pub::signal_handler"}

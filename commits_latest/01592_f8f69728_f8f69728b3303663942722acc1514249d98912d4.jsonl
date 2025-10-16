@@ -1,0 +1,1 @@
+{"prompt": "refactor(user_auth_method): populate default user auth method (#5257)", "response": "Files to modify:\n\n\n**user.rs**\n  Modify existing code\n\n**user.rs**\n  Modify existing code\n\n**user_authentication_method.rs**\n  Modify existing code"}

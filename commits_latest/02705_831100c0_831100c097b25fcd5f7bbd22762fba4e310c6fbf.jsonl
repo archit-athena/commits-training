@@ -1,0 +1,1 @@
+{"prompt": "fix(payout): use billing address in payment_methods (#9277)", "response": "Files to modify:\n\n\n**routing.rs**\n  Modify existing code\n\n**payouts.rs**\n  Modify existing code\n\n**helpers.rs**\n  Add:\n    - function: pub::resolve_billing_address_for_payout\n\n**utils.rs**\n  Modify existing code"}

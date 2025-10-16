@@ -1,0 +1,1 @@
+{"prompt": "feat(globalsearch): Implement tag-based filters in global search (#5151)", "response": "Files to modify:\n\n\n**opensearch.rs**\n  Modify existing code\n\n**search.rs**\n  Modify existing code\n\n**search.rs**\n  Modify existing code"}

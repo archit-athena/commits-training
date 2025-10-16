@@ -1,0 +1,1 @@
+{"prompt": "refactor(users): remove deprecated permission groups (#9604)", "response": "Files to modify:\n\n\n**enums.rs**\n  Modify existing code\n\n**info.rs**\n  Modify existing code\n\n**permission_groups.rs**\n  Modify existing code\n\n**predefined_roles.rs**\n  Modify existing code\n\n**user_role.rs**\n  Modify existing code"}

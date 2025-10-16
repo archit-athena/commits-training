@@ -1,0 +1,1 @@
+{"prompt": "fix(logging): fix traces export through opentelemetry (#1355)", "response": "Files to modify:\n\n\n**setup.rs**\n  Modify existing code"}

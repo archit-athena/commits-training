@@ -1,0 +1,1 @@
+{"prompt": "feat(session_token): create session token only if pmt is enabled (#703)", "response": "Files to modify:\n\n\n**payment_session.rs**\n  Remove:\n    - struct: pub::PaymentMethodEnabled"}

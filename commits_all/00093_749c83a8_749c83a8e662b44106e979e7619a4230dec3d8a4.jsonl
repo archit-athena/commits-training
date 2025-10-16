@@ -1,0 +1,1 @@
+{"prompt": "feat(router): reuse reqwest clients for requests made to connectors (#413)", "response": "Files to modify:\n\n\n**api.rs**\n  Modify existing code\n\n**client.rs**\n  Add:\n    - function: private::create_base_client"}

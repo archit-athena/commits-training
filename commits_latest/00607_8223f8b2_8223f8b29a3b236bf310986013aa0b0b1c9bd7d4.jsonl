@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [Tsys] Update endpoint and unit tests (#1730)\n\nCo-authored-by: Prasunna Soppa <prasunna.soppa@juspay.in>", "response": "Files to modify:\n\n\n**tsys.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**tsys.rs**\n  Modify existing code"}

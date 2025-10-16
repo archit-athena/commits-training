@@ -1,0 +1,1 @@
+{"prompt": "fix(router): update basilisk card save format when fetching from legacy locker (#429)", "response": "Files to modify:\n\n\n**cards.rs**\n  Modify existing code"}

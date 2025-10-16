@@ -1,0 +1,1 @@
+{"prompt": "feat(router): mask keys in `connector_account_details` for merchant_connector_response in mca retrieve flow (#5848)", "response": "Files to modify:\n\n\n**router_data.rs**\n  Add:\n    - function: private::mask_key\n    - function: pub::get_masked_keys\n\n**transformers.rs**\n  Modify existing code"}

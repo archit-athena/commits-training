@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): [Volt] Refactor Payments and Refunds Webhooks (#3377)", "response": "Files to modify:\n\n\n**volt.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - enum: pub::WebhookResponse"}

@@ -1,0 +1,1 @@
+{"prompt": "feat(compatibility): add receipt_ipaddress and user_agent in stripe compatibility (#1417)", "response": "Files to modify:\n\n\n**types.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "fix(aci,braintree,rapyd,stripe): URL encode request params instead of JSON (#437)", "response": "Files to modify:\n\n\n**aci.rs**\n  Modify existing code\n\n**braintree.rs**\n  Modify existing code\n\n**rapyd.rs**\n  Modify existing code\n\n**stripe.rs**\n  Modify existing code"}

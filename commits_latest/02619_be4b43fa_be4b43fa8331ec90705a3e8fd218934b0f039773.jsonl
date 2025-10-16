@@ -1,0 +1,1 @@
+{"prompt": "fix(authentication): fixed notification_url and updated authentication bug (#8843)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**unified_authentication_service.rs**\n  Modify existing code"}

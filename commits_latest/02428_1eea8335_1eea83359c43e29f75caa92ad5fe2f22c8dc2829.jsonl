@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [Worldpay] add root CA certificate (#8205)", "response": "Files to modify:\n\n\n**worldpay.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

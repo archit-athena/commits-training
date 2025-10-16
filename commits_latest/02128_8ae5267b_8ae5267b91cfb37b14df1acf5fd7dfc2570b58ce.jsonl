@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): handle unexpected error response from bluesnap connector (#7120)\n\nCo-authored-by: Anurag Singh <anurag.singh.001@Anurag-Singh-WPMHJ5619X.local>\nCo-authored-by: Gnanasundari24 <118818938+Gnanasundari24@users.noreply.github.com>", "response": "Files to modify:\n\n\n**bluesnap.rs**\n  Modify existing code"}

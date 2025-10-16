@@ -1,0 +1,1 @@
+{"prompt": "refactor(customers_v2): include minor fixes for customer v2 flows (#6876)", "response": "Files to modify:\n\n\n**customer.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code\n\n**customers.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

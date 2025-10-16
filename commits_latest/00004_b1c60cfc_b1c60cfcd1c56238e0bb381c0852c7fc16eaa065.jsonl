@@ -1,0 +1,1 @@
+{"prompt": "fix(mandate): add mandate_id column in payment_attempt table (#3)", "response": "Files to modify:\n\n\n**payment_response.rs**\n  Modify existing code\n\n**payment_attempt.rs**\n  Modify existing code\n\n**schema.rs**\n  Modify existing code\n\n**payment_attempt.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "refactor(euclid_wasm): Update wasm config (#3222)", "response": "Files to modify:\n\n\n**common_config.rs**\n  Add:\n    - struct: pub::CardProvider\n    - struct: pub::Provider\n\n**connector.rs**\n  Add:\n    - struct: pub::Classic\n    - struct: pub::Evoucher\n\n**response_modifier.rs**\n  Modify existing code\n\n**transformer.rs**\n  Modify existing code"}

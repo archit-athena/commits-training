@@ -1,0 +1,1 @@
+{"prompt": "fix(users): Allow accepting invites for `org_admin`s (#6253)", "response": "Files to modify:\n\n\n**user_role.rs**\n  Modify existing code\n\n**user.rs**\n  Modify existing code\n\n**user_role.rs**\n  Modify existing code\n\n**kafka_store.rs**\n  Modify existing code\n\n**user_role.rs**\n  Modify existing code\n\n**user_role.rs**\n  Modify existing code"}

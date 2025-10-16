@@ -1,0 +1,1 @@
+{"prompt": "feat(stripe): get error message for failed redirect payments (#615)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code\n\n**stripe.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**payment_response.rs**\n  Modify existing code"}

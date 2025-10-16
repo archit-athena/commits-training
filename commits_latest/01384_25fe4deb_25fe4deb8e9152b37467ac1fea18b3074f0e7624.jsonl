@@ -1,0 +1,1 @@
+{"prompt": "fix(users): add password validations (#4555)\n\nCo-authored-by: Rachit Naithani <rachit.naithani@juspay.in>", "response": "Files to modify:\n\n\n**user.rs**\n  Modify existing code\n\n**user.rs**\n  Modify existing code\n\n**password.rs**\n  Add:\n    - function: pub::get_temp_password"}

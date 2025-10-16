@@ -1,0 +1,1 @@
+{"prompt": "feat(analytics): populate status_code, initial_attempt_id & delivery_attempt on clickhouse for outgoing webhook events (#5383)", "response": "Files to modify:\n\n\n**outgoing.rs**\n  Modify existing code\n\n**outgoing_webhook_logs.rs**\n  Modify existing code"}

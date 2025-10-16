@@ -1,0 +1,1 @@
+{"prompt": "fix(router): add routing cache invalidation on payment connector update (#3132)", "response": "Files to modify:\n\n\n**admin.rs**\n  Modify existing code\n\n**merchant_account.rs**\n  Modify existing code"}

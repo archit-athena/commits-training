@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [Bluesnap] Update incoming Webhooks flow  (#1982)\n\nCo-authored-by: Swangi Kumari <85639103+swangi-kumari@users.noreply.github.com>", "response": "Files to modify:\n\n\n**bluesnap.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**bluesnap.rs**\n  Modify existing code"}

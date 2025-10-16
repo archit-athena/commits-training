@@ -1,0 +1,1 @@
+{"prompt": "build(deps): bump `diesel` to `2.2.3` and `sqlx` to `0.8.1` (#5688)", "response": "Files to modify:\n\n\n**sqlx.rs**\n  Modify existing code\n\n**api.rs**\n  Modify existing code\n\n**kafka.rs**\n  Modify existing code"}

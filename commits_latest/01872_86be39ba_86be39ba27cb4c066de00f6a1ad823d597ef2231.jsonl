@@ -1,0 +1,1 @@
+{"prompt": "fix(admin): Add JWT Auth for Org Read and Update APIs (#6140)", "response": "Files to modify:\n\n\n**admin.rs**\n  Modify existing code\n\n**authentication.rs**\n  Modify existing code"}

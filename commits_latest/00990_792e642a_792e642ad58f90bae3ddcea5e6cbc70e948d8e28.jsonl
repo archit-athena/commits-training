@@ -1,0 +1,1 @@
+{"prompt": "feat(pm_list): add required fields for bancontact_card for Mollie, Adyen and Stripe (#3035)", "response": "Files to modify:\n\n\n**defaults.rs**\n  Modify existing code"}

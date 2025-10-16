@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [CashToCode]Fix cashtocode redirection for evoucher pm type (#3131)\n\nCo-authored-by: Nitesh Balla <nitesh.balla@juspay.in>\nCo-authored-by: Arjun Karthik <m.arjunkarthik@gmail.com>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - function: private::get_redirect_form_data"}

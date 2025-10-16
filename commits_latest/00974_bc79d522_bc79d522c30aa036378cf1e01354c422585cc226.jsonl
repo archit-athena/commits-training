@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): [Shift4] change error message from NotSupported to NotImplemented (#2880)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

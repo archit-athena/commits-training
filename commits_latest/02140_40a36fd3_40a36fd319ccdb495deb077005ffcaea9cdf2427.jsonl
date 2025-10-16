@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): [Adyen] Removed deprecated PMTs from Ayden (Giropay, Sofort) (#7100)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**adyen.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

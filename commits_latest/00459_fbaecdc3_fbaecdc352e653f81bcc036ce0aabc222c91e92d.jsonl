@@ -1,0 +1,1 @@
+{"prompt": "feat(router): [Bluesnap] add kount frms session_id support for bluesnap connector (#1403)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

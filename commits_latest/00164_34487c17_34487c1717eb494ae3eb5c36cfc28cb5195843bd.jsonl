@@ -1,0 +1,1 @@
+{"prompt": "build(deps): migrate to `clap` from `structopt` (#406)", "response": "Files to modify:\n\n\n**main.rs**\n  Modify existing code\n\n**settings.rs**\n  Modify existing code\n\n**router.rs**\n  Modify existing code\n\n**scheduler.rs**\n  Modify existing code\n\n**settings.rs**\n  Modify existing code"}

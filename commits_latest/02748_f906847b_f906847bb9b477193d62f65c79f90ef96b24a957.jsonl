@@ -1,0 +1,1 @@
+{"prompt": "feat(core): Juspay 3DS Server via Payments API (#9433)", "response": "Files to modify:\n\n\n**payment_confirm.rs**\n  Modify existing code\n\n**app.rs**\n  Modify existing code"}

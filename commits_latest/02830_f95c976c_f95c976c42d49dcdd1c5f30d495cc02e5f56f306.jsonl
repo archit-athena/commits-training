@@ -1,0 +1,1 @@
+{"prompt": "fix(payouts): add should_continue flag for propagating error for each call (#9531)", "response": "Files to modify:\n\n\n**payouts.rs**\n  Modify existing code\n\n**helpers.rs**\n  Add:\n    - function: pub::should_continue_payout"}

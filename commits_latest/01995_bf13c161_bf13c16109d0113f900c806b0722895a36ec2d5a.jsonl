@@ -1,0 +1,1 @@
+{"prompt": "feat(themes): Add `theme_name` and `entity_type` in themes table (#6621)", "response": "Files to modify:\n\n\n**theme.rs**\n  Modify existing code\n\n**theme.rs**\n  Modify existing code\n\n**schema.rs**\n  Modify existing code\n\n**schema_v2.rs**\n  Modify existing code\n\n**theme.rs**\n  Modify existing code\n\n**theme.rs**\n  Modify existing code"}

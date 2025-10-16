@@ -1,0 +1,1 @@
+{"prompt": "build(deps): bump dependencies to compatible versions (#8164)", "response": "Files to modify:\n\n\n**lib.rs**\n  Modify existing code\n\n**vault.rs**\n  Modify existing code\n\n**tokenization.rs**\n  Modify existing code"}

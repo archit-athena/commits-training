@@ -1,0 +1,1 @@
+{"prompt": "refactor(stripe): change NotSupported to NotImplemented error for Stripe (#3690)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

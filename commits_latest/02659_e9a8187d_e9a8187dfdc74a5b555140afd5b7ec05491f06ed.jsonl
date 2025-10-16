@@ -1,0 +1,1 @@
+{"prompt": "refactor(core): refund sync process scheduled time (#8930)", "response": "Files to modify:\n\n\n**refunds.rs**\n  Modify existing code"}

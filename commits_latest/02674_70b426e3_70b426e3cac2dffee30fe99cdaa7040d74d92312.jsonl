@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [nordea] pass valid connector metadata fields and properly throw error unsupported flows (#9041)", "response": "Files to modify:\n\n\n**connector.rs**\n  Modify existing code\n\n**nordea.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

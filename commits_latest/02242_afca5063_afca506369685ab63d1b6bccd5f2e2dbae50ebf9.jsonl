@@ -1,0 +1,1 @@
+{"prompt": "build(deps): update aws dependencies (#4194)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>\nCo-authored-by: Sanchith Hegde <sanchith.hegde@juspay.in>", "response": "Files to modify:\n\n\n**email.rs**\n  Modify existing code\n\n**ses.rs**\n  Modify existing code\n\n**aws_s3.rs**\n  Modify existing code"}

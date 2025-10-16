@@ -1,0 +1,1 @@
+{"prompt": "feat(refunds): Profile level refunds aggregate (#5931)", "response": "Files to modify:\n\n\n**refunds.rs**\n  Modify existing code\n\n**kafka_store.rs**\n  Modify existing code\n\n**refund.rs**\n  Modify existing code\n\n**app.rs**\n  Modify existing code\n\n**refunds.rs**\n  Modify existing code\n\n**refund.rs**\n  Modify existing code"}

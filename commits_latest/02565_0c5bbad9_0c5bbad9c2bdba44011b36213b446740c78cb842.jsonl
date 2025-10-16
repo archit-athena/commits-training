@@ -1,0 +1,1 @@
+{"prompt": "feat(core): Implement UCS kill switch for emergency fallback (#8651)", "response": "Files to modify:\n\n\n**consts.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code\n\n**helpers.rs**\n  Add:\n    - function: pub::is_ucs_enabled\n\n**unified_connector_service.rs**\n  Modify existing code"}

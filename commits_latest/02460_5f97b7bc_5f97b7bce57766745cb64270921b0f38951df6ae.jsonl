@@ -1,0 +1,1 @@
+{"prompt": "refactor(debit_routing): filter debit networks based on merchant connector account configuration (#8175)", "response": "Files to modify:\n\n\n**debit_routing.rs**\n  Remove:\n    - function: private::check_connector_support_for_network\n    - function: private::build_connector_routing_data"}

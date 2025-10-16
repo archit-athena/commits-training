@@ -1,0 +1,1 @@
+{"prompt": "Docs: Updating Error codes for documentation purposes (#5314)\n\nCo-authored-by: Gorakhnath Yadav <gorakhcodes@gmail.com>\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**api_error_response.rs**\n  Modify existing code"}

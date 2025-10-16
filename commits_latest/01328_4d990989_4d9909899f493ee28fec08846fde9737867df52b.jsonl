@@ -1,0 +1,1 @@
+{"prompt": "feat(payment_link): added display_sdk_only option for displaying only sdk without payment details (#4363)", "response": "Files to modify:\n\n\n**admin.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code\n\n**consts.rs**\n  Modify existing code\n\n**payment_link.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "refactor(payment_methods): refactor merchant payment method list for wallets (#7866)", "response": "Files to modify:\n\n\n**enums.rs**\n  Modify existing code\n\n**cards.rs**\n  Modify existing code"}

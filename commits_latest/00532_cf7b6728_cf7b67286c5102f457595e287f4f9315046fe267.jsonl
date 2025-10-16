@@ -1,0 +1,1 @@
+{"prompt": "feat(connector): [DummyConnector] add new dummy connectors (#1609)", "response": "Files to modify:\n\n\n**enums.rs**\n  Modify existing code\n\n**dummyconnector.rs**\n  Modify existing code\n\n**errors.rs**\n  Modify existing code\n\n**utils.rs**\n  Modify existing code\n\n**api.rs**\n  Modify existing code"}

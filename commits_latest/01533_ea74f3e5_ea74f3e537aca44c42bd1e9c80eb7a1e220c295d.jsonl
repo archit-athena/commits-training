@@ -1,0 +1,1 @@
+{"prompt": "fix(payment_methods): use existing field value of `nick_name` in db if not sent during request (#5105)", "response": "Files to modify:\n\n\n**cards.rs**\n  Modify existing code\n\n**tokenization.rs**\n  Modify existing code"}

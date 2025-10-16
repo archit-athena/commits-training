@@ -1,0 +1,1 @@
+{"prompt": "fix(core): use guard for access token result (#522)", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**access_token.rs**\n  Add:\n    - function: pub::update_router_data_with_access_token_result\n\n**refunds.rs**\n  Modify existing code"}

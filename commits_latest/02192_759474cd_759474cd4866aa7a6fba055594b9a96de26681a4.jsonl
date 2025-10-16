@@ -1,0 +1,1 @@
+{"prompt": "refactor(payment_methods): propagate empty wallet details for paypal … (#7423)", "response": "Files to modify:\n\n\n**payment_create.rs**\n  Modify existing code"}

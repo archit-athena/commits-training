@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): pass Samsung Pay `public_key_hash` in the confirm call (#6017)", "response": "Files to modify:\n\n\n**adyen.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - function: private::get_samsung_pay_fluid_data_value\n    - struct: pub::SamsungPayFluidDataValue"}

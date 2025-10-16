@@ -1,0 +1,1 @@
+{"prompt": "feat(router): make webhook events config disabled only and by default enable all the events (#2770)", "response": "Files to modify:\n\n\n**webhooks.rs**\n  Modify existing code\n\n**utils.rs**\n  Remove:\n    - function: private::default_webhook_config"}

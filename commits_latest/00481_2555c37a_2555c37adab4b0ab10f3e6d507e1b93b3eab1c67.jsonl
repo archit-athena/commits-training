@@ -1,0 +1,1 @@
+{"prompt": "feat(db): implement `MandateInterface` for `MockDb` (#1387)", "response": "Files to modify:\n\n\n**db.rs**\n  Modify existing code\n\n**mandate.rs**\n  Modify existing code"}

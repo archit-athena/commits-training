@@ -1,0 +1,1 @@
+{"prompt": "fix(router): handle JSON connector response parse error (#1892)", "response": "Files to modify:\n\n\n**braintree.rs**\n  Add:\n    - function: private::build_error_response\n\n**rapyd.rs**\n  Modify existing code\n\n**trustpay.rs**\n  Modify existing code\n\n**utils.rs**\n  Add:\n    - function: pub::handle_json_response_deserialization_failure"}

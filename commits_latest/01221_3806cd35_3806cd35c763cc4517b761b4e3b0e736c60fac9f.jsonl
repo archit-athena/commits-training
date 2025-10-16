@@ -1,0 +1,1 @@
+{"prompt": "feat(connector): [AUTHORIZEDOTNET] Add billing address in payments request (#3981)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - struct: pub::BillTo\n    - struct: pub::Order"}

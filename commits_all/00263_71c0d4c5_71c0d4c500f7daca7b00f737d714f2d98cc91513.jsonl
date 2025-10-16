@@ -1,0 +1,1 @@
+{"prompt": "test(connector): [Globalpay] Fix unit tests (#1217)\n\nSigned-off-by: chikke srujan <121822803+srujanchikke@users.noreply.github.com>", "response": "Files to modify:\n\n\n**globalpay.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**connector_auth.rs**\n  Modify existing code\n\n**globalpay.rs**\n  Modify existing code"}

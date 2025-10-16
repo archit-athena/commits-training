@@ -1,0 +1,1 @@
+{"prompt": "chore(injector): injector change for proxy (#9460)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**injector.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code\n\n**vault_metadata.rs**\n  Modify existing code"}

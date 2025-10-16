@@ -1,0 +1,1 @@
+{"prompt": "refactor(Tokenization): remove ConnectorCallType from tokenization call (#862)", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code"}

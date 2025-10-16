@@ -1,0 +1,1 @@
+{"prompt": "feat(connector): [Paypal] use connector request reference id as reference for paypal (#2577)", "response": "Files to modify:\n\n\n**paypal.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - struct: pub::RedirectPurchaseUnitItem"}

@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): (payload) currency auth key wasm changes (#8825)", "response": "Files to modify:\n\n\n**connector.rs**\n  Add:\n    - struct: pub::PayloadCurrencyAuthKeyType"}

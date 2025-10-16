@@ -1,0 +1,15 @@
+{
+  "total_samples": 281,
+  "with_identifier_data": 94,
+  "match_methods": {
+    "none": 187,
+    "pr_number": 94
+  },
+  "feature_types": {
+    "search_filter": 261,
+    "payment": 10,
+    "connector_integration": 6,
+    "unknown": 3,
+    "authentication": 1
+  }
+}

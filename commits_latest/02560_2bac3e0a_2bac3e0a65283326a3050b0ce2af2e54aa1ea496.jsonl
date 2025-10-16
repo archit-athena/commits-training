@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [Cybersource] Add type_selection_indicator as 1 for all cards  (#8663)\n\nCo-authored-by: Debarati Ghatak <debarati.ghatak@Debarati-Ghatak-FW569NC29L.local>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

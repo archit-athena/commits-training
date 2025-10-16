@@ -1,0 +1,1 @@
+{"prompt": "Connector Sanity tests in CI/CD (#732)\n\nCo-authored-by: Arjun Karthik <m.arjunkarthik@gmail.com>\nCo-authored-by: Sanchith Hegde <22217505+SanchithHegde@users.noreply.github.com>", "response": "Files to modify:\n\n\n**connector_auth.rs**\n  Modify existing code\n\n**worldline.rs**\n  Modify existing code"}

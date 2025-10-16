@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): [Paysafe] populate error code and message for 200 errors (#9497)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

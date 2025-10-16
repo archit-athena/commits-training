@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): [Adyen] refactor adyen payment method not implemented errors (#1950)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code\n\n**utils.rs**\n  Modify existing code\n\n**adyen_uk_ui.rs**\n  Modify existing code"}

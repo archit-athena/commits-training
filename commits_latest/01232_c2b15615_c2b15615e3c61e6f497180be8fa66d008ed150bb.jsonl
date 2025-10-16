@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): [Multisafepay] Mask PII data  (#3869)", "response": "Files to modify:\n\n\n**serde.rs**\n  Add:\n    - impl: impl SerializableSecret for i32\n\n**transformers.rs**\n  Modify existing code"}

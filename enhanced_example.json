@@ -1,0 +1,37 @@
+{
+  "prompt": "Currently, the Customer List API (/api/customers/list?limit=20&offset=0) does not support search functionality, which forces the dashboard to display customers without the ability to search dynamically.\n\nWe want to enhance this API to support search across multiple fields so that users can quickly locate a customer.\nSupported fields for full text match:\n\ncustomer_id: \"cust_abcdefgh\"\n\nname: \"venu\"\n\nemail: \"venu.b@juspay.in\"\n\nphone: \"+91234567890\"",
+  "response": "To implement this **search_filter** feature, you'll need to modify these architectural layers:\n\n\n**1. API Request/Response Models**\n   - `crates/api_models/src/customers.rs`\n\n**2. Database Layer (Queries & Schema)**\n   - `crates/diesel_models/src/query/customers.rs`\n\n**3. Domain Models (Business Logic Types)**\n   - `crates/hyperswitch_domain_models/src/customer.rs`\n\n**4. Core Business Logic**\n   - `crates/router/src/core/customers.rs`\n   - `crates/router/src/core/locker_migration.rs`\n\n**Code Patterns Applied:**\n- Implement new functions (1 changes)\n- Extend existing types with new fields (9 changes)\n- Add conditional logic for feature flags or filtering (2 changes)\n- Modify database queries (7 changes)",
+  "metadata": {
+    "instance_id": "juspay__hyperswitch-9642",
+    "intent": {
+      "feature_type": "search_filter",
+      "action": "add_feature",
+      "entities": [
+        "customer",
+        "payment",
+        "merchant"
+      ]
+    },
+    "hierarchy": {
+      "api_models": [
+        "crates/api_models/src/customers.rs"
+      ],
+      "database": [
+        "crates/diesel_models/src/query/customers.rs"
+      ],
+      "domain": [
+        "crates/hyperswitch_domain_models/src/customer.rs"
+      ],
+      "core_business": [
+        "crates/router/src/core/customers.rs",
+        "crates/router/src/core/locker_migration.rs"
+      ]
+    },
+    "change_types": {
+      "functions_added": 1,
+      "fields_added": 9,
+      "conditionals_added": 2,
+      "database_queries": 7
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"prompt": "fix(core): [Bluesnap] Add secondary_base_url for script (#2124)", "response": "Files to modify:\n\n\n**wrap.rs**\n  Modify existing code\n\n**settings.rs**\n  Modify existing code\n\n**api.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "feat(list): global filter mapping for payment methods via card network (#694)", "response": "Files to modify:\n\n\n**settings.rs**\n  Remove:\n    - struct: pub::PaymentMethodFilters\n  Add:\n    - struct: pub::PaymentMethodFilters\n    - enum: pub::PaymentMethodFilterKey\n\n**cards.rs**\n  Modify existing code"}

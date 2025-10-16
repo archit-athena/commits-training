@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [TRUSTPAY] Consuming Amount in PSync Response (#8455)\n\nCo-authored-by: Sayak Bhattacharya <sayak.b@Sayak-Bhattacharya-G092THXJ34.local>", "response": "Files to modify:\n\n\n**trustpay.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

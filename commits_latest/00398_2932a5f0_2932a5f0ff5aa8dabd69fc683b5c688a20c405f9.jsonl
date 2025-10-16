@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [Adyen] fix status mapping for Adyen authorize, capture, refund API (#1149)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code\n\n**adyen.rs**\n  Modify existing code"}

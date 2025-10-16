@@ -1,0 +1,1 @@
+{"prompt": "feat: Allow payment cancels for more statuses (#1027)\n\nCo-authored-by: Sanchith Hegde <22217505+SanchithHegde@users.noreply.github.com>", "response": "Files to modify:\n\n\n**payment_cancel.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code"}

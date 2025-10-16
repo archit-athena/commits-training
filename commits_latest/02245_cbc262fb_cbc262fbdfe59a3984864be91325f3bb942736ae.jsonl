@@ -1,0 +1,1 @@
+{"prompt": "refactor(dynamic_fields): Multiple SDK queries fixed (#7380)", "response": "Files to modify:\n\n\n**enums.rs**\n  Modify existing code\n\n**transformer.rs**\n  Modify existing code\n\n**address.rs**\n  Modify existing code\n\n**payment_connector_required_fields.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code"}

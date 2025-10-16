@@ -1,0 +1,1 @@
+{"prompt": "feat(proxy): add support to pass proxy bypass urls from configs (#5322)", "response": "Files to modify:\n\n\n**scheduler.rs**\n  Modify existing code\n\n**defaults.rs**\n  Modify existing code\n\n**settings.rs**\n  Modify existing code\n\n**lib.rs**\n  Modify existing code\n\n**api.rs**\n  Modify existing code\n\n**client.rs**\n  Modify existing code"}

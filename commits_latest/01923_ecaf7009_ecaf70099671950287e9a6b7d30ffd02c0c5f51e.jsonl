@@ -1,0 +1,1 @@
+{"prompt": "chore: Add samsung pay payment method support for cybersource (#6424)", "response": "Files to modify:\n\n\n**common_config.rs**\n  Remove:\n    - struct: pub::MetaDataInupt\n  Add:\n    - struct: pub::InputData\n\n**connector.rs**\n  Add:\n    - struct: pub::ConnectorWalletDetailsConfig"}

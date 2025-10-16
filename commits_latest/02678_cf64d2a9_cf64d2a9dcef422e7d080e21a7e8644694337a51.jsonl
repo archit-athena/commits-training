@@ -1,0 +1,1 @@
+{"prompt": "feat(core): Added support for unified_connector_service CardNumber and Secret<String> Type (#9044)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**unified_connector_service.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

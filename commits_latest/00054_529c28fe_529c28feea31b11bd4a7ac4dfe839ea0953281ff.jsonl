@@ -1,0 +1,1 @@
+{"prompt": "fix: mandate_type change & unittests (#132)", "response": "Files to modify:\n\n\n**payment_methods.rs**\n  Add:\n    - function: private::set_or_reject_duplicate\n\n**payments.rs**\n  Add:\n    - function: private::test_mandate_type\n    - mod: private::tests\n\n**payment_methods.rs**\n  Add:\n    - function: private::set_or_reject_duplicate"}

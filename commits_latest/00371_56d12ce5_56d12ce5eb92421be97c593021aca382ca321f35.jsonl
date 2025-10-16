@@ -1,0 +1,1 @@
+{"prompt": "ci(migrations): add diesel migrations validations (#1056)\n\nCo-authored-by: Sanchith Hegde <sanchith.hegde@juspay.in>", "response": "Files to modify:\n\n\n**merchant_account.rs**\n  Modify existing code\n\n**schema.rs**\n  Modify existing code"}

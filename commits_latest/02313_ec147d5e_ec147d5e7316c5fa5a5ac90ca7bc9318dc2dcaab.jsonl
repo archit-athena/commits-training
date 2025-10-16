@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [Cybersource] send type selection indicator for co-batch cards (#7828)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "ci: update versions of actions (#1388)", "response": "Files to modify:\n\n\n**flows.rs**\n  Remove:\n    - mod: pub::verfiy_flow\n  Add:\n    - mod: pub::verify_flow\n\n**verify_flow.rs**\n  Modify existing code\n\n**coinbase.rs**\n  Modify existing code\n\n**opennode.rs**\n  Modify existing code"}

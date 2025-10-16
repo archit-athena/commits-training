@@ -1,0 +1,1 @@
+{"prompt": "fix(api_key): fix api key `list` and `update` endpoints for v2 (#5980)", "response": "Files to modify:\n\n\n**api_keys.rs**\n  Modify existing code\n\n**events.rs**\n  Modify existing code\n\n**openapi.rs**\n  Modify existing code\n\n**openapi_v2.rs**\n  Modify existing code\n\n**api_keys.rs**\n  Modify existing code\n\n**api_keys.rs**\n  Modify existing code"}

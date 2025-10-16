@@ -1,0 +1,1 @@
+{"prompt": "router_derive: fix: Use compile_error instead of panic (#332)", "response": "Files to modify:\n\n\n**lib.rs**\n  Modify existing code\n\n**helpers.rs**\n  Add:\n    - function: pub::syn_error\n\n**operation.rs**\n  Modify existing code"}

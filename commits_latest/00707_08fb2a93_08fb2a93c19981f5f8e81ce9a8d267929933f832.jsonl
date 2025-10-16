@@ -1,0 +1,1 @@
+{"prompt": "chore: add metrics for external api call (#2021)", "response": "Files to modify:\n\n\n**consts.rs**\n  Modify existing code\n\n**cards.rs**\n  Modify existing code\n\n**metrics.rs**\n  Modify existing code\n\n**request.rs**\n  Modify existing code\n\n**api.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code"}

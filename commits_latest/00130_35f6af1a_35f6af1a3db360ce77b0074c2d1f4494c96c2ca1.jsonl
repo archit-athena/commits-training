@@ -1,0 +1,1 @@
+{"prompt": "build(deps): update deps (#342)", "response": "Files to modify:\n\n\n**adyen.rs**\n  Modify existing code\n\n**cybersource.rs**\n  Modify existing code\n\n**consts.rs**\n  Modify existing code\n\n**client.rs**\n  Modify existing code\n\n**encryption.rs**\n  Remove:\n    - struct: pub::KeyHandler\n  Add:\n    - struct: pub::KeyHandler"}

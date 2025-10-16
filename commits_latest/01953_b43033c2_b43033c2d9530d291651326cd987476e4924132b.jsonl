@@ -1,0 +1,1 @@
+{"prompt": "fix(users): Add force rotate password on first login for non-email flow (#6483)", "response": "Files to modify:\n\n\n**user.rs**\n  Add:\n    - function: private::deref\n    - struct: pub::NewUserPassword\n    - impl: impl Deref for NewUserPassword"}

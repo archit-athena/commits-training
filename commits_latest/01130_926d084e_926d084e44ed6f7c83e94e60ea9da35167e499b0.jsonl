@@ -1,0 +1,1 @@
+{"prompt": "refactor: [Noon] add new field max_amount to mandate request  (#3481)\n\nCo-authored-by: swangi-kumari <swangi.12015941@lpu.in>\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**types.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "fix(config): fix docker compose local setup (#1372)\n\nCo-authored-by: Sanchith Hegde <22217505+SanchithHegde@users.noreply.github.com>", "response": "Files to modify:\n\n\n**requests.rs**\n  Modify existing code"}

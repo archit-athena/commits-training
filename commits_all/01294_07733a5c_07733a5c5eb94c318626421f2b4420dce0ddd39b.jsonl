@@ -1,0 +1,1 @@
+{"prompt": "feat(connector): implement wallet mandates for authorizedotnet (#7412)", "response": "Files to modify:\n\n\n**authorizedotnet.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

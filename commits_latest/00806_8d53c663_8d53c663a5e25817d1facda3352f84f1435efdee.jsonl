@@ -1,0 +1,1 @@
+{"prompt": "feat(connector): [Gocardless] Add mandate webhoooks (#2468)", "response": "Files to modify:\n\n\n**gocardless.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - struct: pub::MandateWebhookLink\n    - enum: pub::MandatesAction"}

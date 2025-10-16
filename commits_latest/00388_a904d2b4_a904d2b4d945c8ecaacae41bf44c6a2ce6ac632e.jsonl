@@ -1,0 +1,1 @@
+{"prompt": "fix(mandate): only trigger mandate procedure on successful connector call (#1122)", "response": "Files to modify:\n\n\n**mandate.rs**\n  Modify existing code"}

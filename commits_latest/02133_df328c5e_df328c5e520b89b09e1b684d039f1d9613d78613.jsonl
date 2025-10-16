@@ -1,0 +1,1 @@
+{"prompt": "feat(opensearch): add amount and customer_id as filters and handle name for different indexes (#7073)", "response": "Files to modify:\n\n\n**opensearch.rs**\n  Add:\n    - function: pub::get_amount_field\n\n**search.rs**\n  Add:\n    - function: pub::convert_to_value\n\n**search.rs**\n  Add:\n    - function: pub::convert_to_value"}

@@ -1,0 +1,1 @@
+{"prompt": "refactor(client): simplify HTTP client construction (#731)", "response": "Files to modify:\n\n\n**client.rs**\n  Remove:\n    - function: private::get_proxy_url\n    - enum: private::ProxyType"}

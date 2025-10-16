@@ -1,0 +1,1 @@
+{"prompt": "fix(klarna): payments failing because of failed deserialization (#363)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Remove:\n    - enum: pub::KlarnaPaymentStatus\n  Add:\n    - enum: pub::KlarnaFraudStatus\n\n**transformers.rs**\n  Remove:\n    - enum: pub::KlarnaPaymentStatus\n  Add:\n    - enum: pub::KlarnaFraudStatus"}

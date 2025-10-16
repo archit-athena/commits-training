@@ -1,0 +1,1 @@
+{"prompt": "feat(router): migrate `payment_method_data` to rust locker only if `payment_method` is card (#2929)", "response": "Files to modify:\n\n\n**locker_migration.rs**\n  Modify existing code\n\n**cards.rs**\n  Modify existing code"}

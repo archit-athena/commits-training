@@ -1,0 +1,1 @@
+{"prompt": "feat(payouts): Implement Single Connector Retry for Payouts (#3908)", "response": "Files to modify:\n\n\n**gsm.rs**\n  Modify existing code\n\n**payouts.rs**\n  Modify existing code\n\n**retry.rs**\n  Add:\n    - function: pub::do_gsm_multiple_connector_actions\n    - enum: pub::PayoutRetryType"}

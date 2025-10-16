@@ -1,0 +1,1 @@
+{"prompt": "feat(payments): add field manual_retry_allowed in payments response (#1298)", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**helpers.rs**\n  Add:\n    - function: pub::is_manual_retry_allowed\n\n**transformers.rs**\n  Modify existing code"}

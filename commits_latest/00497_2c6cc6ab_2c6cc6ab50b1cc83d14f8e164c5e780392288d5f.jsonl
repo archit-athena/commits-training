@@ -1,0 +1,1 @@
+{"prompt": "fix: invalidate all cache on invalidate cache route (#1498)", "response": "Files to modify:\n\n\n**cache.rs**\n  Modify existing code\n\n**cache.rs**\n  Modify existing code\n\n**cache.rs**\n  Modify existing code\n\n**services.rs**\n  Modify existing code"}

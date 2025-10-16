@@ -1,0 +1,1 @@
+{"prompt": "fix(core): Add Payment_Method_data in Redirection Form  (#1668)\n\nCo-authored-by: swangi-kumari <swangi.12015941@lpu.in>\nCo-authored-by: Jagan Elavarasan <jaganelavarasan@gmail.com>", "response": "Files to modify:\n\n\n**payment_start.rs**\n  Modify existing code\n\n**bluesnap_ui.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "feat(connector): [AUTHORIZEDOTNET] Add AVS checks (#8511)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

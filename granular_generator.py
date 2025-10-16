@@ -80,12 +80,14 @@ class GranularDatasetGenerator:
                  vllm_url: str = "http://10.11.7.31:8000/v1",
                  model: str = "meta-llama/Llama-3.1-8B-Instruct",
                  min_files: int = 5,
-                 max_workers: int = 4):
+                 max_workers: int = 4,
+                 mode: str = "breakdown"):
         self.dataset_name = dataset_name
         self.output_dir = Path(output_dir)
         self.vllm_client = vLLMClient(base_url=vllm_url, model=model)
         self.min_files = min_files  # Minimum files to consider a commit "large"
         self.max_workers = max_workers
+        self.mode = mode  # "breakdown" or "transform"
         self.errors = []
 
     def count_files_in_response(self, response: str) -> int:
@@ -120,8 +122,44 @@ Return ONLY a JSON array like this:
             {"role": "user", "content": user_message}
         ]
 
+    def create_transformation_prompt(self, prompt: str, response: str) -> List[Dict[str, str]]:
+        """Create a prompt to transform technical commits into product-focused queries"""
+        system_message = """You are an expert at translating technical Git commits into high-level product requirements and digestible implementation guidance.
+
+Your task is to transform:
+1. Technical commit messages → Natural product/business queries or tasks
+2. Technical file diffs → Clear, digestible explanations of what files and functions to change
+
+Return ONLY a JSON object like this:
+{
+  "prompt": "How do I add payment card support for the PlaceToPay connector?",
+  "response": "To implement card payments for PlaceToPay, you'll need to:\n\n1. Update placetopay.rs:\n   - Add new validation for capture methods\n   - Create request building functions (get_headers, get_request_body, build_request)\n   - Add response handling and error management\n\n2. Update transformers.rs:\n   - Define payment data structures (PlacetopayAuth, PlacetopayPayment, PlacetopayAmount)\n   - Add card instrument structure (PlacetopayInstrument)\n   - Create authorization action enum\n\n3. Add to utils.rs:\n   - Implement generate_random_bytes for secure token generation"
+}
+
+Guidelines:
+- Convert technical jargon to business/product language
+- Focus on "what" and "why", not just "how"
+- Make the response readable and actionable
+- Group related changes logically
+- Use numbered lists and clear structure"""
+
+        user_message = f"""Transform this technical commit into a product-focused query and digestible response:
+
+COMMIT MESSAGE:
+{prompt}
+
+TECHNICAL CHANGES:
+{response}
+
+Return ONLY the JSON object."""
+
+        return [
+            {"role": "system", "content": system_message},
+            {"role": "user", "content": user_message}
+        ]
+
     def parse_llm_response(self, llm_output: str) -> Optional[List[Dict[str, str]]]:
-        """Parse the LLM's JSON response"""
+        """Parse the LLM's JSON response (expects array)"""
         try:
             # Try to extract JSON from the response
             # Sometimes the model adds extra text, so we find the JSON array
@@ -135,6 +173,26 @@ Return ONLY a JSON array like this:
             return json.loads(llm_output)
         except json.JSONDecodeError as e:
             print(f"❌ Failed to parse LLM response as JSON: {e}")
+            print(f"Response was: {llm_output[:200]}...")
+            return None
+
+    def parse_transformation_response(self, llm_output: str) -> Optional[Dict[str, str]]:
+        """Parse the LLM's JSON response for transformation (expects single object)"""
+        try:
+            # Try to extract JSON object from the response
+            json_match = re.search(r'\{\s*"prompt".*?"response".*?\}', llm_output, re.DOTALL)
+            if json_match:
+                json_str = json_match.group(0)
+                parsed = json.loads(json_str)
+                return parsed
+
+            # If no match, try parsing the whole thing
+            parsed = json.loads(llm_output)
+            if isinstance(parsed, dict) and 'prompt' in parsed and 'response' in parsed:
+                return parsed
+            return None
+        except json.JSONDecodeError as e:
+            print(f"❌ Failed to parse transformation response as JSON: {e}")
             print(f"Response was: {llm_output[:200]}...")
             return None
 
@@ -158,15 +216,43 @@ Return ONLY a JSON array like this:
 
         return parsed_commits
 
+    def transform_commit(self, example: Dict[str, str]) -> Dict[str, str]:
+        """Use LLM to transform technical commit into product-focused query and digestible response"""
+        messages = self.create_transformation_prompt(example['prompt'], example['response'])
+
+        llm_response = self.vllm_client.chat_completion(
+            messages=messages,
+            temperature=0.5,  # Slightly higher for more natural language
+            max_tokens=1024
+        )
+
+        if not llm_response:
+            return example  # Return original if LLM fails
+
+        parsed_transformation = self.parse_transformation_response(llm_response)
+
+        if not parsed_transformation:
+            return example  # Return original if parsing fails
+
+        return parsed_transformation
+
     def process_example(self, example: Dict[str, str], idx: int) -> List[Dict[str, str]]:
-        """Process a single example, breaking it down if needed"""
+        """Process a single example based on the mode (breakdown or transform)"""
         try:
-            if self.is_large_commit(example):
-                # Break down large commit
-                broken_down = self.break_down_commit(example)
-                return broken_down
+            if self.mode == "transform":
+                # Transform commit to product-focused format
+                transformed = self.transform_commit(example)
+                return [transformed]
+            elif self.mode == "breakdown":
+                if self.is_large_commit(example):
+                    # Break down large commit
+                    broken_down = self.break_down_commit(example)
+                    return broken_down
+                else:
+                    # Keep small commits as-is
+                    return [example]
             else:
-                # Keep small commits as-is
+                # Unknown mode, return as-is
                 return [example]
         except Exception as e:
             error_msg = f"Error processing example {idx}: {str(e)}"
@@ -243,9 +329,12 @@ Return ONLY a JSON array like this:
                         'total_out': len(all_granular_examples)
                     })
 
-            # Save granular dataset
-            print(f"\n💾 Saving granular dataset...")
-            output_file = self.output_dir / "granular_dataset.jsonl"
+            # Save dataset
+            print(f"\n💾 Saving dataset...")
+            if self.mode == "transform":
+                output_file = self.output_dir / "transformed_dataset.jsonl"
+            else:
+                output_file = self.output_dir / "granular_dataset.jsonl"
             self.save_as_jsonl(all_granular_examples, output_file)
 
             # Create statistics report
@@ -272,23 +361,28 @@ Return ONLY a JSON array like this:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Break down large commits into granular pairs using vLLM",
+        description="Break down large commits into granular pairs OR transform to product-focused format using vLLM",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Generate granular dataset from HuggingFace
-  %(prog)s archit11/hyperswitch-rust-commits-final2
+  # Transform dataset to product-focused format
+  %(prog)s archit11/hyperswitch-rust-commits-final2 --mode transform
+
+  # Break down large commits into granular pairs
+  %(prog)s archit11/hyperswitch-rust-commits-final2 --mode breakdown -m 5
 
   # Custom settings
-  %(prog)s archit11/hyperswitch-rust-commits-final2 -o output_dir -m 3 --vllm-url http://localhost:8000/v1
+  %(prog)s archit11/hyperswitch-rust-commits-final2 -o output_dir --vllm-url http://localhost:8000/v1
         """
     )
 
     parser.add_argument("dataset_name", help="HuggingFace dataset name (e.g., archit11/hyperswitch-rust-commits-final2)")
-    parser.add_argument("-o", "--output", default="granular_dataset",
-                       help="Output directory (default: granular_dataset)")
+    parser.add_argument("-o", "--output", default="transformed_dataset",
+                       help="Output directory (default: transformed_dataset)")
+    parser.add_argument("--mode", choices=["breakdown", "transform"], default="transform",
+                       help="Processing mode: 'breakdown' splits large commits, 'transform' converts to product format (default: transform)")
     parser.add_argument("-m", "--min-files", type=int, default=5,
-                       help="Minimum files to consider commit 'large' (default: 5)")
+                       help="Minimum files to consider commit 'large' (only for breakdown mode, default: 5)")
     parser.add_argument("--vllm-url", default="http://10.11.7.31:8000/v1",
                        help="vLLM server URL (default: http://10.11.7.31:8000/v1)")
     parser.add_argument("--model", default="zai-org/GLM-4.6-FP8",
@@ -299,11 +393,13 @@ Examples:
     args = parser.parse_args()
 
     print("=" * 80)
-    print("🦀 Granular Rust Commit Dataset Generator")
+    print("🦀 Rust Commit Dataset Processor")
     print("=" * 80)
     print(f"📍 Dataset: {args.dataset_name}")
+    print(f"🔧 Mode: {args.mode}")
     print(f"🤖 vLLM URL: {args.vllm_url}")
-    print(f"📏 Min files threshold: {args.min_files}")
+    if args.mode == "breakdown":
+        print(f"📏 Min files threshold: {args.min_files}")
     print("=" * 80)
 
     generator = GranularDatasetGenerator(
@@ -312,7 +408,8 @@ Examples:
         vllm_url=args.vllm_url,
         model=args.model,
         min_files=args.min_files,
-        max_workers=args.max_workers
+        max_workers=args.max_workers,
+        mode=args.mode
     )
 
     generator.generate()

@@ -1,0 +1,1 @@
+{"prompt": "fix: consume profile_id throughout payouts flow (#2501)\n\nCo-authored-by: Kashif <mohammed.kashif@juspay.in>", "response": "Files to modify:\n\n\n**payouts.rs**\n  Modify existing code\n\n**payouts.rs**\n  Modify existing code\n\n**utils.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code\n\n**utils.rs**\n  Modify existing code"}

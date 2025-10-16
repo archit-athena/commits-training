@@ -1,0 +1,1 @@
+{"prompt": "feat(rapyd): ApplePay and GooglePay integration (#425)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - struct: pub::Address\n    - struct: pub::RapydWallet"}

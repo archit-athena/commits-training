@@ -1,0 +1,1 @@
+{"prompt": "test(connector): [Adyen] Add UI test for Adyen Payment methods (#1648)", "response": "Files to modify:\n\n\n**adyen_uk_ui.rs**\n  Add:\n    - function: private::should_make_adyen_3ds_mandate_payment\n\n**selenium.rs**\n  Modify existing code\n\n**connector_auth.rs**\n  Modify existing code"}

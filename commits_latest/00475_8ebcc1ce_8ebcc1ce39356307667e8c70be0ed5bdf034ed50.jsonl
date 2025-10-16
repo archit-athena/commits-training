@@ -1,0 +1,1 @@
+{"prompt": "feat(connector): [Noon] Add GooglePay, ApplePay, PayPal Support (#1450)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - struct: pub::NoonApplePay\n    - struct: pub::NoonGooglePay\n    - struct: pub::NoonPayPal"}

@@ -1,0 +1,1 @@
+{"prompt": "feat(router): add key_value to locker metrics (#2995)", "response": "Files to modify:\n\n\n**cards.rs**\n  Modify existing code\n\n**metrics.rs**\n  Modify existing code"}

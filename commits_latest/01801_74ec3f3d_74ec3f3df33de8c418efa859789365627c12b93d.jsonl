@@ -1,0 +1,1 @@
+{"prompt": "refactor: add hgetall command to redis interface (#5727)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**commands.rs**\n  Add:\n    - function: pub::delete_multiple_keys\n    - function: pub::increment_fields_in_hash\n    - function: pub::get_hash_fields"}

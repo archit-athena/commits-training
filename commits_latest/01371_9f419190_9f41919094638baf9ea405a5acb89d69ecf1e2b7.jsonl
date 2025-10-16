@@ -1,0 +1,1 @@
+{"prompt": "feat(euclid_wasm): Add configs for new payout connectors (#4528)", "response": "Files to modify:\n\n\n**connector.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "refactor(payment_methods): use recurring enabled flag to decide which payment method supports MIT (#4732)", "response": "Files to modify:\n\n\n**merchant_connector_account.rs**\n  Modify existing code\n\n**cards.rs**\n  Add:\n    - function: pub::get_mca_status"}

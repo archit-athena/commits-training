@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [Airwallex] Psync response (#1826)\n\nCo-authored-by: SamraatBansal <55536657+SamraatBansal@users.noreply.github.com>", "response": "Files to modify:\n\n\n**airwallex.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - function: private::get_payment_status"}

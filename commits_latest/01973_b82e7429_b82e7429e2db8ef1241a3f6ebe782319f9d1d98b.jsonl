@@ -1,0 +1,1 @@
+{"prompt": "feat(connector): [ADYEN] Integrate Paze (#6545)", "response": "Files to modify:\n\n\n**adyen.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - struct: private::AdyenMpiData"}

@@ -1,0 +1,1 @@
+{"prompt": "feat(Connector): [Paypal] add support for dispute webhooks for paypal connector (#2353)", "response": "Files to modify:\n\n\n**paypal.rs**\n  Add:\n    - function: private::get_dispute_details\n\n**transformers.rs**\n  Modify existing code"}

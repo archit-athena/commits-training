@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [Airwallex] Change Session Token to Init Payment (#798)", "response": "Files to modify:\n\n\n**airwallex.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): [Iatapay] refactor authorize flow and fix payment status mapping (#2409)\n\nCo-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**iatapay.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

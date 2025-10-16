@@ -1,0 +1,1 @@
+{"prompt": "fix(router_env): resolve/remove `FIXME`'s and redundent files (#168)", "response": "Files to modify:\n\n\n**config.rs**\n  Modify existing code\n\n**formatter.rs**\n  Modify existing code\n\n**macros.rs**\n  Modify existing code\n\n**setup.rs**\n  Remove:\n    - function: private::on_event\n    - struct: pub::DebugLayer\n    - impl: impl Layer<S> for DebugLayer"}

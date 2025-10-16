@@ -1,0 +1,1 @@
+{"prompt": "fix(core): fix recurring mandates flow for cyber source (#3224)\n\nCo-authored-by: Samraat Bansal <samraat.bansal@juspay.in>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - struct: pub::MandatePaymentInformation\n\n**payments.rs**\n  Modify existing code"}

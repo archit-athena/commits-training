@@ -1,0 +1,1 @@
+{"prompt": "fix: add validation for connector authentication type during mca create and update operation (#4932)", "response": "Files to modify:\n\n\n**admin.rs**\n  Add:\n    - function: pub::validate_auth_and_metadata_type"}

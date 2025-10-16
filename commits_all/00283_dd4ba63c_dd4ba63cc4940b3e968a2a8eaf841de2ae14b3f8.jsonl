@@ -1,0 +1,1 @@
+{"prompt": "feat: add `merchant_name` field in the response body (#1280)\n\nCo-authored-by: Prajjwal Kumar <prajjwal.kumar@juspay.in>\r\nCo-authored-by: Sanchith Hegde <sanchith.hegde@juspay.in>", "response": "Files to modify:\n\n\n**payment_methods.rs**\n  Modify existing code\n\n**cards.rs**\n  Modify existing code"}

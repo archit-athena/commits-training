@@ -1,0 +1,1 @@
+{"prompt": "fix: [CYBERSOURCE] Fix Status Mapping (#3144)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**cybersource.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - struct: pub::CybersourceApplicationInfoResponse\n    - enum: pub::CybersourceTransactionResponse"}

@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [adyenplatform] update error mapping (#9384)", "response": "Files to modify:\n\n\n**adyenplatform.rs**\n  Modify existing code\n\n**payouts.rs**\n  Modify existing code\n\n**payouts.rs**\n  Modify existing code"}

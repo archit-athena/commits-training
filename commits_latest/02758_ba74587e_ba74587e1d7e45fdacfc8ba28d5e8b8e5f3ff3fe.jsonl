@@ -1,0 +1,1 @@
+{"prompt": "feat(connector): [Nuvei] Add Support for External 3DS Auth  (#9468)", "response": "Files to modify:\n\n\n**connector_enums.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - function: private::get_auth_data\n    - function: private::get_auth_data\n    - struct: pub::ExternalMpi\n\n**payments.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "fix(router): make payment method or token not necessary for recurring mandates (#293)", "response": "Files to modify:\n\n\n**payment_confirm.rs**\n  Modify existing code\n\n**payment_create.rs**\n  Modify existing code\n\n**payment_update.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "fix(template): Address add_connector.sh throwing errors when creating new connector template (#1679)", "response": "Files to modify:\n\n\n**test.rs**\n  Modify existing code"}

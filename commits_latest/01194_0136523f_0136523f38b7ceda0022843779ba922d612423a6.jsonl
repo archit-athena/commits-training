@@ -1,0 +1,1 @@
+{"prompt": "refactor(roles): Add more checks in create, update role APIs and change the response type (#3896)", "response": "Files to modify:\n\n\n**user_role.rs**\n  Modify existing code\n\n**role.rs**\n  Modify existing code\n\n**predefined_roles.rs**\n  Modify existing code\n\n**user_role.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "feat(router): verify service for applepay merchant registration v2 (#8999)", "response": "Files to modify:\n\n\n**verification.rs**\n  Modify existing code\n\n**utils.rs**\n  Modify existing code\n\n**lib.rs**\n  Modify existing code\n\n**app.rs**\n  Add:\n    - function: pub::server\n    - impl: impl Verify\n\n**verification.rs**\n  Modify existing code"}

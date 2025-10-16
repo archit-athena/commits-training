@@ -1,0 +1,1 @@
+{"prompt": "refactor: use lowercase names for run environment and config files (#801)", "response": "Files to modify:\n\n\n**settings.rs**\n  Modify existing code\n\n**settings.rs**\n  Modify existing code\n\n**env.rs**\n  Modify existing code\n\n**config.rs**\n  Modify existing code"}

@@ -1,0 +1,1 @@
+{"prompt": "feat(core): Add outgoing webhook for manual `partial_capture` events (#3388)", "response": "Files to modify:\n\n\n**utils.rs**\n  Remove:\n    - function: private::foreign_try_from\n    - impl: impl ForeignTryFrom<enums::IntentStatus> for enums::EventType"}

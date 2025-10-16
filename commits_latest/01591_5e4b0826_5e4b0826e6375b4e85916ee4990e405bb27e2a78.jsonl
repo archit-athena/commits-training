@@ -1,0 +1,1 @@
+{"prompt": "refactor(connector): Update connector_refund_id and Refactor Webhook Status (#5280)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - struct: pub::RefundRes"}

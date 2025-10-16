@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): [Stripe] Deserialization Error while parsing Dispute Webhook Body (#3256)\n\nCo-authored-by: Arjun Karthik <m.arjunkarthik@gmail.com>", "response": "Files to modify:\n\n\n**stripe.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

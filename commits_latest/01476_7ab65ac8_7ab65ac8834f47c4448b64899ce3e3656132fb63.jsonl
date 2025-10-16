@@ -1,0 +1,1 @@
+{"prompt": "chore(users): email templates updated (#4562)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>\nCo-authored-by: Pritish Budhiraja <pritish.budhiraja@gmail.com>", "response": "Files to modify:\n\n\n**types.rs**\n  Modify existing code"}

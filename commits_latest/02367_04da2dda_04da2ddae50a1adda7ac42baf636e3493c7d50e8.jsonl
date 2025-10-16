@@ -1,0 +1,1 @@
+{"prompt": "fix(core): language consumption from locale in payment and payout links (#7993)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**context.rs**\n  Add:\n    - function: private::get_language"}

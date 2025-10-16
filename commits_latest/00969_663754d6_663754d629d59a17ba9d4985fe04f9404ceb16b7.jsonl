@@ -1,0 +1,1 @@
+{"prompt": "fix(connector): move authorised status to charged in setup mandate (#3017)", "response": "Files to modify:\n\n\n**cybersource.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - struct: pub::CybersourceSetupMandatesResponse"}

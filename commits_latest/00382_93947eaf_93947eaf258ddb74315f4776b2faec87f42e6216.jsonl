@@ -1,0 +1,1 @@
+{"prompt": "feat(Connector): [Stripe] Implement Wechatpay Digital Wallet (#1049)\n\nCo-authored-by: Arjun Karthik <m.arjunkarthik@gmail.com>\nCo-authored-by: Jagan Elavarasan <jaganelavarasan@gmail.com>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - struct: pub::WechatpayPayment\n    - struct: pub::StripeRedirectToQr\n    - enum: pub::WechatClient"}

@@ -1,0 +1,1 @@
+{"prompt": "fix(errors): use `Debug` impl instead of `Display` for error types wrapping `error_stack::Report` (#714)", "response": "Files to modify:\n\n\n**errors.rs**\n  Modify existing code\n\n**errors.rs**\n  Modify existing code"}
