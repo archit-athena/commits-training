@@ -27,23 +27,59 @@ class GitHubScraper:
 
     def __init__(self, repo_owner: str, repo_name: str,
                  github_token: Optional[str] = None,
+                 github_tokens: Optional[List[str]] = None,
                  output_dir: str = "github_data"):
         self.repo_owner = repo_owner
         self.repo_name = repo_name
-        self.github_token = github_token or os.environ.get('GITHUB_TOKEN')
         self.output_dir = Path(output_dir)
         self.base_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}"
 
-        if not self.github_token:
+        # Support multiple tokens for fallback
+        if github_tokens:
+            self.tokens = github_tokens
+        elif github_token:
+            self.tokens = [github_token]
+        else:
+            env_token = os.environ.get('GITHUB_TOKEN')
+            # Check for multiple tokens in env (comma-separated)
+            if env_token and ',' in env_token:
+                self.tokens = [t.strip() for t in env_token.split(',')]
+            elif env_token:
+                self.tokens = [env_token]
+            else:
+                self.tokens = []
+
+        self.current_token_idx = 0
+
+        if not self.tokens:
             print("⚠️  Warning: No GitHub token provided. Rate limits will be strict (60/hour)")
-            print("   Set GITHUB_TOKEN env var or pass --token for 5000/hour")
+            print("   Set GITHUB_TOKEN env var or pass --tokens for 5000/hour per token")
+        else:
+            print(f"✅ {len(self.tokens)} GitHub token(s) detected")
+            for i, token in enumerate(self.tokens, 1):
+                print(f"   Token {i}: {token[:10]}...{token[-4:]}")
+            print(f"   Total rate limit: {5000 * len(self.tokens)} requests/hour")
 
         self.session = requests.Session()
-        if self.github_token:
+        self._set_current_token()
+
+    def _set_current_token(self):
+        """Set the current token in session headers"""
+        if self.tokens and self.current_token_idx < len(self.tokens):
+            current_token = self.tokens[self.current_token_idx]
             self.session.headers.update({
-                'Authorization': f'token {self.github_token}',
+                'Authorization': f'token {current_token}',
                 'Accept': 'application/vnd.github.v3+json'
             })
+
+    def _switch_token(self):
+        """Switch to next available token"""
+        if self.current_token_idx + 1 < len(self.tokens):
+            self.current_token_idx += 1
+            self._set_current_token()
+            print(f"\n🔄 Switching to token {self.current_token_idx + 1}/{len(self.tokens)}")
+            return True
+        return False
 
     def check_rate_limit(self):
         """Check GitHub API rate limit"""
@@ -96,9 +132,14 @@ class GitHubScraper:
                     )
 
                     if response.status_code == 403:
-                        print("\n⚠️  Rate limit exceeded. Waiting...")
-                        time.sleep(60)
-                        continue
+                        print("\n⚠️  Rate limit exceeded!")
+                        if self._switch_token():
+                            print("   Retrying with new token...")
+                            continue
+                        else:
+                            print("   No more tokens available. Waiting 60 seconds...")
+                            time.sleep(60)
+                            continue
 
                     response.raise_for_status()
                     page_issues = response.json()
@@ -162,9 +203,14 @@ class GitHubScraper:
                     )
 
                     if response.status_code == 403:
-                        print("\n⚠️  Rate limit exceeded. Waiting...")
-                        time.sleep(60)
-                        continue
+                        print("\n⚠️  Rate limit exceeded!")
+                        if self._switch_token():
+                            print("   Retrying with new token...")
+                            continue
+                        else:
+                            print("   No more tokens available. Waiting 60 seconds...")
+                            time.sleep(60)
+                            continue
 
                     response.raise_for_status()
                     page_prs = response.json()
@@ -326,16 +372,20 @@ class GitHubScraper:
             print(f"\n🔍 Fetching detailed PR information...")
             detailed_prs = []
 
-            for pr in tqdm(prs, desc="PR Details"):
-                pr_number = pr['number']
-                details = self.get_pr_details(pr_number)
+            try:
+                for pr in tqdm(prs, desc="PR Details"):
+                    pr_number = pr['number']
+                    details = self.get_pr_details(pr_number)
 
-                if details:
-                    detailed_prs.append(details)
+                    if details:
+                        detailed_prs.append(details)
 
-                time.sleep(0.5)  # Rate limiting
+                    time.sleep(0.5)  # Rate limiting
 
-            prs = detailed_prs
+                prs = detailed_prs
+            except KeyboardInterrupt:
+                print(f"\n\n⚠️  Interrupted! Saving {len(detailed_prs)} PRs collected so far...")
+                prs = detailed_prs
 
         # Save data
         print(f"\n💾 Saving data...")

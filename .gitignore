@@ -1,4 +1,24 @@
+# Dataset directories
 hyperswitch_dataset/
 dataset_output/
-hyperswitch_dataset/
 test_output_v2/
+hyperswitch_final/
+commits_all/
+commits_ctx50/
+commits_full/
+commits_latest/
+final_dataset/
+final_dataset_2/
+final_dataset_complete/
+final_dataset_full/
+final_dataset_smart/
+github_data/
+github_data_2k/
+github_data_full/
+
+# Cache
+__pycache__/
+
+# Large files
+*.patch
+*.jsonl

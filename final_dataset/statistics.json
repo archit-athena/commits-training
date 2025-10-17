@@ -1,12 +1,11 @@
 {
-  "total_samples": 281,
-  "with_identifier_data": 0,
-  "feature_types": {
-    "search_filter": 261,
-    "payment": 10,
-    "connector_integration": 6,
-    "unknown": 3,
-    "authentication": 1
+  "total_samples": 9,
+  "with_identifier_data": 6,
+  "match_methods": {
+    "pr_number": 6,
+    "none": 3
   },
-  "avg_commits_per_pr": 0.0
+  "feature_types": {
+    "search_filter": 9
+  }
 }

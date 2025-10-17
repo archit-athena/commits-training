@@ -10,15 +10,18 @@ from datasets import Dataset, DatasetDict
 from huggingface_hub import HfApi, login
 
 
-def load_jsonl_files(directory: str):
-    """Load all JSONL/RS files or CSV from directory"""
-    dataset_dir = Path(directory)
+def load_jsonl_files(path: str):
+    """Load from JSONL file or directory of JSONL files"""
+    path_obj = Path(path)
     data = []
 
-    print(f"📂 Loading dataset files from {dataset_dir}...")
-
-    # Load .jsonl and .rs files (dataset files) - PREFER THESE
-    dataset_files = sorted(list(dataset_dir.glob("*.jsonl")) + list(dataset_dir.glob("*.rs")))
+    # Check if it's a file or directory
+    if path_obj.is_file():
+        print(f"📂 Loading dataset from file: {path_obj}...")
+        dataset_files = [path_obj]
+    else:
+        print(f"📂 Loading dataset files from directory: {path_obj}...")
+        dataset_files = sorted(list(path_obj.glob("*.jsonl")) + list(path_obj.glob("*.rs")))
 
     print(f"Found {len(dataset_files)} dataset files")
 
@@ -27,13 +30,26 @@ def load_jsonl_files(directory: str):
             for line in f:
                 if line.strip():
                     entry = json.loads(line.strip())
-                    # Simplify: only keep prompt and response
-                    data.append({
-                        'prompt': entry['prompt'],
-                        'response': entry['response']
-                    })
+                    # Keep ALL fields - don't truncate anything
+                    data_entry = {
+                        'prompt': entry.get('prompt', ''),
+                        'response': entry.get('response', '')
+                    }
+                    # Include metadata if present (as JSON string for HF compatibility)
+                    if 'metadata' in entry:
+                        data_entry['metadata'] = json.dumps(entry['metadata'])
+                    data.append(data_entry)
 
     print(f"✓ Loaded {len(data)} examples")
+
+    # Show sample response length stats
+    if data:
+        response_lengths = [len(d['response']) for d in data]
+        print(f"📊 Response length stats:")
+        print(f"   - Min: {min(response_lengths)} chars")
+        print(f"   - Max: {max(response_lengths)} chars")
+        print(f"   - Avg: {sum(response_lengths) // len(response_lengths)} chars")
+
     return data
 
 

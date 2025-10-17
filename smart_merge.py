@@ -151,11 +151,17 @@ class SmartMerger:
                     'identifiers': commit_info['response']
                 })
 
-            # Create prompt
-            enhanced_prompt = self.mapper.create_enhanced_prompt_from_juspay({
-                'problem_statement': problem_statement,
-                'hints_text': ''
-            })
+            # Create prompt - use FULL PR title + body, don't strip
+            pr_title = pr.get('title', '')
+            pr_body = pr.get('body', '')
+
+            # Combine title and body for complete context
+            if pr_title and pr_body:
+                enhanced_prompt = f"{pr_title}\n\n{pr_body}"
+            elif pr_title:
+                enhanced_prompt = pr_title
+            else:
+                enhanced_prompt = pr_body
 
             # Combine responses
             if detailed_identifiers:
