@@ -22,3 +22,9 @@ __pycache__/
 # Large files
 *.patch
 *.jsonl
+
+# Additional dataset directories to ignore
+commits_m20/
+commits_m50/
+commits_with_context/
+test_output/
