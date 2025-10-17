@@ -1,1 +1,0 @@
-{"prompt": "docs: fix quick start guide and update dashboard link (#454)", "response": "Files to modify:\n\n\n**openapi.rs**\n  Modify existing code"}

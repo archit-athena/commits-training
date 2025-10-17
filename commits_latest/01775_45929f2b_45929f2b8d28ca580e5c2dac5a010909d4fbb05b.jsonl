@@ -1,1 +1,0 @@
-{"prompt": "chore: add wasm support for connector additional details (#5712)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**connector.rs**\n  Add:\n    - struct: pub::ConfigMerchantAdditionalDetails"}

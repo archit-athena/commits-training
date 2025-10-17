@@ -1,1 +1,0 @@
-{"prompt": "refactor(payment_methods): update `connector_mandate_details` for card metadata changes (#6848)", "response": "Files to modify:\n\n\n**payment_response.rs**\n  Modify existing code\n\n**tokenization.rs**\n  Modify existing code"}

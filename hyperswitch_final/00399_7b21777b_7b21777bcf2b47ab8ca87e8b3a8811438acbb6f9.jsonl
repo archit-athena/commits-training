@@ -1,1 +1,0 @@
-{"prompt": "ci(validate-openapi-spec): fail check if OpenAPI spec is not up-to-date (#1582)\n\nCo-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**generate_schema.rs**\n  Modify existing code"}

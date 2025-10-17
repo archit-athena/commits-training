@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): [ACI] cypress added (#9502)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**aci_result_codes.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

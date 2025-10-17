@@ -1,1 +1,0 @@
-{"prompt": "revert: refactor(pm_list): Update required fields for a payment method (#1724)\n\nCo-authored-by: Tinu Hareesswar <tinuhareesswarr@gmail.com>", "response": "Files to modify:\n\n\n**enums.rs**\n  Modify existing code\n\n**defaults.rs**\n  Modify existing code"}

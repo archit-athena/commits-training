@@ -1,1 +1,0 @@
-{"prompt": "refactor(webhooks): check event type not supported before checking for profile_id (#3543)", "response": "Files to modify:\n\n\n**webhooks.rs**\n  Modify existing code\n\n**utils.rs**\n  Modify existing code"}

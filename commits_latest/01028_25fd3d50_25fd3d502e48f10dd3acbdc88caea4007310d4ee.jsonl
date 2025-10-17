@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): [BOA] Implement apple pay manual flow (#3191)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - struct: pub::ApplePayTokenizedCard\n    - struct: pub::ApplePayTokenPaymentInformation"}

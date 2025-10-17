@@ -1,1 +1,0 @@
-{"prompt": "refactor(payment_methods): handle card duplication (#3146)", "response": "Files to modify:\n\n\n**cards.rs**\n  Add:\n    - function: pub::insert_payment_method\n\n**transformers.rs**\n  Add:\n    - enum: pub::DataDuplicationCheck\n\n**tokenization.rs**\n  Modify existing code"}

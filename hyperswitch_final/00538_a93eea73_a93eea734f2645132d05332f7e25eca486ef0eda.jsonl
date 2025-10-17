@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): (globalpay) add support for multilple partial capture (#2035)", "response": "Files to modify:\n\n\n**braintree_graphql_transformers.rs**\n  Modify existing code\n\n**globalpay.rs**\n  Modify existing code\n\n**requests.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

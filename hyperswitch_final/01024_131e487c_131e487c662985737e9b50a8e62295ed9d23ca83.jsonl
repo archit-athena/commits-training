@@ -1,1 +1,0 @@
-{"prompt": "feat(router): handle authorize redirection after webhook processing for external 3ds flow (#4452)", "response": "Files to modify:\n\n\n**authentication.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code"}

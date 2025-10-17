@@ -1,1 +1,0 @@
-{"prompt": "feat(roles): Add groups for `get_from_token` api (#3872)", "response": "Files to modify:\n\n\n**user_role.rs**\n  Modify existing code\n\n**role.rs**\n  Add:\n    - enum: pub::GetRoleFromTokenResponse\n\n**role.rs**\n  Add:\n    - enum: pub::GetRoleFromTokenResponse\n\n**user_role.rs**\n  Modify existing code"}

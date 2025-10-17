@@ -1,1 +1,0 @@
-{"prompt": "fix: fetch data directly from DB in OLAP functions (#2475)", "response": "Files to modify:\n\n\n**refund.rs**\n  Modify existing code\n\n**payment_intent.rs**\n  Modify existing code"}

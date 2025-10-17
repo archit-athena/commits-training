@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): [AUTHORIZEDOTNET] Fix status mapping (#3845)", "response": "Files to modify:\n\n\n**authorizedotnet.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

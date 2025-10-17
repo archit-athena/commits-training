@@ -1,1 +1,0 @@
-{"prompt": "refactor(connector): [Stripe] fix mandate flow  (#4281)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Remove:\n    - function: private::foreign_from\n    - impl: impl ForeignFrom<(Option<StripePaymentMethodOptions>, String)> for types::MandateReference"}

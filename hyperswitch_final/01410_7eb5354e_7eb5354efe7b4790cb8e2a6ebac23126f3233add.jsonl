@@ -1,1 +1,0 @@
-{"prompt": "feat(opensearch): add profile_id and organization_id to /search APIs (#5705)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**opensearch.rs**\n  Modify existing code\n\n**search.rs**\n  Modify existing code\n\n**analytics.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): [ACI] 3DS, connector mandate id, error handling fixed (#9367)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - function: private::get_recurring_type\n    - enum: pub::AciRecurringType"}

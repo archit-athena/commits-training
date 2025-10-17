@@ -1,1 +1,0 @@
-{"prompt": "feat(core): add runtime flag to disable dummy connector (#2100)", "response": "Files to modify:\n\n\n**settings.rs**\n  Modify existing code\n\n**admin.rs**\n  Modify existing code\n\n**admin.rs**\n  Modify existing code"}

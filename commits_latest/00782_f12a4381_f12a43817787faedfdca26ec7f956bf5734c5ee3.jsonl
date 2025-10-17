@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): [noon] Create psync struct from webhook resource object (#2370)", "response": "Files to modify:\n\n\n**noon.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - function: private::from\n    - struct: pub::NoonWebhookObject\n    - impl: impl From<NoonWebhookObject> for NoonPaymentsResponse"}

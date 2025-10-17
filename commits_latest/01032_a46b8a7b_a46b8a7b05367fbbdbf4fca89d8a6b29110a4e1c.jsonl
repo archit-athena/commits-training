@@ -1,1 +1,0 @@
-{"prompt": "refactor(connector): [NMI] Include mandatory fields for card 3DS (#3203)", "response": "Files to modify:\n\n\n**defaults.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**api.rs**\n  Modify existing code"}

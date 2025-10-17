@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): [Novalnet] Add supported currencies (#6547)", "response": "Files to modify:\n\n\n**enums.rs**\n  Modify existing code\n\n**payment_connector_required_fields.rs**\n  Modify existing code"}

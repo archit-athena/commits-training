@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): [HELCIM] Add connector_request_reference_id in invoice_number  (#3087)", "response": "Files to modify:\n\n\n**defaults.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - function: pub::check_currency\n    - struct: pub::HelcimInvoice\n    - struct: pub::HelcimLineItems"}

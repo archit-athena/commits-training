@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): [BANKOFAMERICA] Add Required Fields for GPAY (#3014)", "response": "Files to modify:\n\n\n**defaults.rs**\n  Modify existing code"}

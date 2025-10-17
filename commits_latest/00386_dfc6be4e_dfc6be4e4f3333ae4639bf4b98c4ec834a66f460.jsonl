@@ -1,1 +1,0 @@
-{"prompt": "feat(pm_list): add pm list support for bank_debits  (#1120)", "response": "Files to modify:\n\n\n**payment_methods.rs**\n  Add:\n    - struct: pub::BankDebitTypes\n\n**cards.rs**\n  Modify existing code"}

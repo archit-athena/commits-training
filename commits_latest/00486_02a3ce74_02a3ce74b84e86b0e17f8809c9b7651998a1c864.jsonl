@@ -1,1 +1,0 @@
-{"prompt": "refactor(errors): refactor `actix_web::ResponseError` for `ApiErrorResponse` (#1362)", "response": "Files to modify:\n\n\n**api_error_response.rs**\n  Modify existing code"}

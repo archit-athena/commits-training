@@ -1,1 +1,0 @@
-{"prompt": "fix(users): clear cookie and alter parsing for sso (#5147)\n\nCo-authored-by: Mani Chandra <84711804+ThisIsMani@users.noreply.github.com>", "response": "Files to modify:\n\n\n**user.rs**\n  Modify existing code\n\n**user.rs**\n  Modify existing code"}

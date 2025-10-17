@@ -1,1 +1,0 @@
-{"prompt": "feat(FRM): add shipping details for signifyd (#4500)", "response": "Files to modify:\n\n\n**api.rs**\n  Modify existing code\n\n**api.rs**\n  Modify existing code\n\n**transaction_flow.rs**\n  Modify existing code\n\n**fraud_check_pre.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code\n\n**fraud_check.rs**\n  Modify existing code"}

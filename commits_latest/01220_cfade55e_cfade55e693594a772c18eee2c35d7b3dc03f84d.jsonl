@@ -1,1 +1,0 @@
-{"prompt": "refactor: kms decrypt analytics config (#3984)", "response": "Files to modify:\n\n\n**lib.rs**\n  Add:\n    - function: private::convert_to_raw_secret\n    - impl: impl SecretsHandler for AnalyticsConfig\n\n**secrets_transformers.rs**\n  Modify existing code\n\n**settings.rs**\n  Modify existing code\n\n**app.rs**\n  Modify existing code"}

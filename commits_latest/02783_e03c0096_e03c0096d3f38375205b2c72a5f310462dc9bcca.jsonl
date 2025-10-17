@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): Add Peachpayments Cypress (#9573)\n\nCo-authored-by: Anurag Singh <anurag.singh.001@MacBookPro.lan>\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**peachpayments.rs**\n  Add:\n    - function: private::build_request\n\n**transformers.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "feat: populate fields from payment attempt in payment list (#736)", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - function: private::foreign_from\n    - impl: impl ForeignFrom<(storage::PaymentIntent, storage::PaymentAttempt)> for api::PaymentsResponse\n\n**payments.rs**\n  Modify existing code"}

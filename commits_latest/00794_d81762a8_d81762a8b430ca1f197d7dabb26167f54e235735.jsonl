@@ -1,1 +1,0 @@
-{"prompt": "feat(pm_list): [Trustpay] add bank_redirect -  blik pm type required field info for trustpay (#2390)", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**defaults.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

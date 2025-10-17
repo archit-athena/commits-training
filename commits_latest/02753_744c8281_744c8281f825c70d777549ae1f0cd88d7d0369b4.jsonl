@@ -1,1 +1,0 @@
-{"prompt": "feat(Connector): [checkout] l2l3 data  (#9446)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - struct: pub::CheckoutCustomer\n    - struct: pub::CheckoutProcessing\n    - struct: pub::CheckoutShippingAddress\n    - struct: pub::CheckoutShipping\n    - struct: pub::CheckoutLineItem"}

@@ -1,1 +1,0 @@
-{"prompt": "fix(analytics): retry implementation for forex crate call (#7280)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>\nCo-authored-by: Sandeep Kumar <sandeep.kumar@juspay.in>", "response": "Files to modify:\n\n\n**consts.rs**\n  Modify existing code\n\n**currency.rs**\n  Modify existing code"}

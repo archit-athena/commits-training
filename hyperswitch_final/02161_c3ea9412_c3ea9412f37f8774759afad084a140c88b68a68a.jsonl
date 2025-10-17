@@ -1,1 +1,0 @@
-{"prompt": "chore: Updated openapi spec added labels to wallet data (#9287)\n\nCo-authored-by: Kupili Reddy <kupili.reddy@Kupili-Reddy-CXKDQRYQCF.local>\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code"}

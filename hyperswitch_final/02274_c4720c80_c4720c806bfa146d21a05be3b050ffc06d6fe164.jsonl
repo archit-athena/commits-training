@@ -1,1 +1,0 @@
-{"prompt": "feat(migration): add connector_customer updation support to batch PM update API (#9791)\n\nCo-authored-by: Mrudul Vajpayee <mrudul.vajpayee@juspay.in>", "response": "Files to modify:\n\n\n**payment_methods.rs**\n  Modify existing code\n\n**migration.rs**\n  Add:\n    - function: private::build_connector_customer_update"}

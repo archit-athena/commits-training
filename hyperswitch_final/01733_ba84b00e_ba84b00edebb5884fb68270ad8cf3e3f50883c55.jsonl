@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): [Moneris] Implement mandate for Moneris (#7322)", "response": "Files to modify:\n\n\n**moneris.rs**\n  Add:\n    - function: private::validate_mandate_payment\n\n**transformers.rs**\n  Remove:\n    - struct: pub::PaymentMethod\n  Add:\n    - struct: pub::PaymentMethodCard\n    - struct: pub::PaymentMethodId\n    - enum: pub::PaymentMethod"}

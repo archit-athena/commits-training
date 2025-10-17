@@ -1,1 +1,0 @@
-{"prompt": "fix(router): Update request body for migrate-batch api (#6429)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**payment_methods.rs**\n  Modify existing code\n\n**migration.rs**\n  Modify existing code\n\n**payment_methods.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "fix(payment_methods): return parent_payment_method_token for other payment methods (BankTransfer, Wallet, BankRedirect)  (#1951)", "response": "Files to modify:\n\n\n**helpers.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "fix(router): disable openapi examples (#2648)", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code"}

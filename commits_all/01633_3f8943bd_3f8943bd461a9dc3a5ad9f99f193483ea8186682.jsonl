@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): [checkout] add support for MOTO payments (#9327)\n\nCo-authored-by: Vani Gupta <vani.gupta@juspay.in>\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code\n\n**utils.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "refactor(connector): [Nuvie] Mask PII data (#3924)", "response": "Files to modify:\n\n\n**nuvei.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

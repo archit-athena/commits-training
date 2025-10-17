@@ -1,1 +1,0 @@
-{"prompt": "feat(router): Override the `setup_future_usage` to `on_session` based on the merchant config (#5016)", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**helpers.rs**\n  Add:\n    - function: pub::config_skip_saving_wallet_at_connector\n\n**tokenization.rs**\n  Modify existing code"}

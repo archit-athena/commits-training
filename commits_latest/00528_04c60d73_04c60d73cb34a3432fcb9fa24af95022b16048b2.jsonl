@@ -1,1 +1,0 @@
-{"prompt": "fix(payment_methods): return an empty array when the merchant does not have any payment methods (#1601)", "response": "Files to modify:\n\n\n**cards.rs**\n  Modify existing code"}

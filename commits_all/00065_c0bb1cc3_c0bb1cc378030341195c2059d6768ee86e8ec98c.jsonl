@@ -1,1 +1,0 @@
-{"prompt": "chore: rename orca to hyperswitch (#310)", "response": "Files to modify:\n\n\n**errors.rs**\n  Modify existing code\n\n**admin.rs**\n  Modify existing code\n\n**api.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code"}

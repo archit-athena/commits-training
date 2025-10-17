@@ -1,1 +1,0 @@
-{"prompt": "refactor(compatibility): added compatibility layer request logs (#3774)", "response": "Files to modify:\n\n\n**payment_intents.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code\n\n**refunds.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code"}

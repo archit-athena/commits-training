@@ -1,1 +1,0 @@
-{"prompt": "fix(payment_attempt): consider merchant storage scheme when finding payment attempt by connector txn ID, payment ID, merchant ID (#291)", "response": "Files to modify:\n\n\n**payment_attempt.rs**\n  Modify existing code"}

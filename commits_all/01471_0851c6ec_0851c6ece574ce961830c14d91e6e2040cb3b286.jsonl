@@ -1,1 +1,0 @@
-{"prompt": "docs(connector): [STRIPE] Added CIT & MIT Examples for API Reference in Stripe Split Payments (#8311)\n\nCo-authored-by: Sayak Bhattacharya <sayak.b@Sayak-Bhattacharya-G092THXJ34.local>", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code"}

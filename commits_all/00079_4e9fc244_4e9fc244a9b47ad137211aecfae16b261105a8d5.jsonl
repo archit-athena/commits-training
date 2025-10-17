@@ -1,1 +1,0 @@
-{"prompt": "build(deps): use utoipa crate upstream URL as git dependency (#378)", "response": "Files to modify:\n\n\n**admin.rs**\n  Modify existing code"}

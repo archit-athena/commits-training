@@ -1,1 +1,0 @@
-{"prompt": "fix(compatibility): change next_action type and customer request type (#675)", "response": "Files to modify:\n\n\n**types.rs**\n  Remove:\n    - struct: pub::CustomerAddress\n\n**types.rs**\n  Remove:\n    - struct: pub::CustomerAddress"}

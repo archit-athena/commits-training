@@ -1,1 +1,0 @@
-{"prompt": "fix(redis): add support for fetching multiple keys for redis cluster (#9019)", "response": "Files to modify:\n\n\n**commands.rs**\n  Add:\n    - function: private::get_multiple_keys_with_mget\n    - function: private::get_keys_by_mode\n\n**lib.rs**\n  Modify existing code"}

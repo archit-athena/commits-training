@@ -1,1 +1,0 @@
-{"prompt": "fix(connectors): [Nexixpay] handle optional fields in nexixpay payments requests. (#7465)\n\nCo-authored-by: Mrudul Vajpayee <mrudul.vajpayee@mrudulvajpayee-XJWXCWP7HF.local>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code\n\n**payment_connector_required_fields.rs**\n  Modify existing code"}

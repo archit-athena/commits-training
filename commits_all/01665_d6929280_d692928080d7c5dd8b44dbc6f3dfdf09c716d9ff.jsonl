@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): [checkout] Add NTID flow (#9449)\n\nCo-authored-by: Vani Gupta <vani.gupta@juspay.in>", "response": "Files to modify:\n\n\n**checkout.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

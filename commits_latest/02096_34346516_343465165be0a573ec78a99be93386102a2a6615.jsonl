@@ -1,1 +1,0 @@
-{"prompt": "refactor(redis_interface): make the redis command for using scripts to write into redis Generic (#6965)", "response": "Files to modify:\n\n\n**commands.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "feat(session): Added dpa_client_id, provider to click to pay session response (#7683)", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code"}

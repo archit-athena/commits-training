@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): Add invoice number and email in AuthorizeDotNet connector (#7726)\n\nCo-authored-by: Anurag Singh <anurag.singh.001@Anurag-Singh-WPMHJ5619X.local>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - function: private::get_random_string"}

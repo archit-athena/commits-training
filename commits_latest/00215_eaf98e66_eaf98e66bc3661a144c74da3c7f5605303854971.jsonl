@@ -1,1 +1,0 @@
-{"prompt": "refactor(router): appstate as trait in authentication (#588)", "response": "Files to modify:\n\n\n**authentication.rs**\n  Modify existing code\n\n**utils.rs**\n  Modify existing code"}

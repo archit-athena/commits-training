@@ -1,1 +1,0 @@
-{"prompt": "chore(errors): cleanup unused `ApplicationError` variants (#356)", "response": "Files to modify:\n\n\n**errors.rs**\n  Modify existing code\n\n**api.rs**\n  Modify existing code"}

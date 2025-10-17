@@ -1,1 +1,0 @@
-{"prompt": "fix(core): PMD Not Getting Populated for Saved Card Transactions  (#6497)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code\n\n**payment_confirm.rs**\n  Modify existing code"}

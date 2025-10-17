@@ -1,1 +1,0 @@
-{"prompt": "build(deps): bump `fred` from `5.2.0` to `6.0.0` (#869)", "response": "Files to modify:\n\n\n**commands.rs**\n  Modify existing code\n\n**lib.rs**\n  Modify existing code\n\n**services.rs**\n  Modify existing code"}

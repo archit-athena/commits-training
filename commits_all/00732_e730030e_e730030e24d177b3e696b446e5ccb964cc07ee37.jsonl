@@ -1,1 +1,0 @@
-{"prompt": "refactor(required_fields): change required fields for billing address (#4258)", "response": "Files to modify:\n\n\n**defaults.rs**\n  Modify existing code"}

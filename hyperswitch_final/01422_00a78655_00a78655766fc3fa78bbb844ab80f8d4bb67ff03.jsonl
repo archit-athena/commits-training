@@ -1,1 +1,0 @@
-{"prompt": "refactor(connector): [Paybox] Fix Error Handling/Datetime format (#5905)", "response": "Files to modify:\n\n\n**lib.rs**\n  Modify existing code\n\n**transformers.rs**\n  Remove:\n    - function: private::from\n    - enum: pub::PayboxPaymentStatus\n    - impl: impl From<PayboxPaymentStatus> for enums::AttemptStatus"}

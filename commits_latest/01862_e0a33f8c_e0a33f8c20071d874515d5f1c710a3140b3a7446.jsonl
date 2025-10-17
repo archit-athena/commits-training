@@ -1,1 +1,0 @@
-{"prompt": "fix(router): fix billing details path in required field (#5992)", "response": "Files to modify:\n\n\n**defaults.rs**\n  Modify existing code"}

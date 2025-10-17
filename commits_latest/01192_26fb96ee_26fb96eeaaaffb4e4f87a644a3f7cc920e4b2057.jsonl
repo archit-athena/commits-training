@@ -1,1 +1,0 @@
-{"prompt": "feat: add unresponsive timeout for fred (#3369)", "response": "Files to modify:\n\n\n**lib.rs**\n  Add:\n    - function: pub::on_unresponsive\n\n**types.rs**\n  Modify existing code"}

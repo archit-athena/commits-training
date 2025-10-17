@@ -1,1 +1,0 @@
-{"prompt": "feat(core): added customer phone_number and email to session token response for click to pay (#6863)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code"}

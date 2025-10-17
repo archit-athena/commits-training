@@ -1,1 +1,0 @@
-{"prompt": "feat(core): update additional payment method data in psync response (#9519)\n\nCo-authored-by: Vani Gupta <vani.gupta@juspay.in>", "response": "Files to modify:\n\n\n**payment_response.rs**\n  Modify existing code"}

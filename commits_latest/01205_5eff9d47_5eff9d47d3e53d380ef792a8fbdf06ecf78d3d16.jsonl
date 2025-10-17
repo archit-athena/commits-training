@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): [PLACETOPAY] Fix refund request and status mapping (#3894)", "response": "Files to modify:\n\n\n**placetopay.rs**\n  Modify existing code\n\n**transformers.rs**\n  Remove:\n    - enum: pub::PlacetopayStatus\n  Add:\n    - enum: pub::PlacetopayTransactionStatus"}

@@ -1,1 +1,0 @@
-{"prompt": "fix(logging): fix stack overflow on recording restricted keys (#4423)", "response": "Files to modify:\n\n\n**health.rs**\n  Modify existing code\n\n**formatter.rs**\n  Modify existing code\n\n**storage.rs**\n  Add:\n    - function: pub::record_value"}

@@ -1,1 +1,0 @@
-{"prompt": "fix: Set headers as optional in ob flows (#6305)", "response": "Files to modify:\n\n\n**pm_auth.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**pm_auth.rs**\n  Modify existing code\n\n**pm_auth.rs**\n  Modify existing code"}

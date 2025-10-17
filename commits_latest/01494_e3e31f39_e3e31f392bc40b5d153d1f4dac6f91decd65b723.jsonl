@@ -1,1 +1,0 @@
-{"prompt": "refactor(users): Make password nullable in `users` table (#4902)", "response": "Files to modify:\n\n\n**schema.rs**\n  Modify existing code\n\n**user.rs**\n  Modify existing code\n\n**user.rs**\n  Modify existing code\n\n**user.rs**\n  Modify existing code\n\n**user.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "fix: add graceful shutdown for consumer & router (#428)", "response": "Files to modify:\n\n\n**defaults.rs**\n  Modify existing code\n\n**settings.rs**\n  Modify existing code\n\n**lib.rs**\n  Modify existing code\n\n**consumer.rs**\n  Modify existing code\n\n**utils.rs**\n  Add:\n    - function: pub::signal_handler\n\n**payment_sync.rs**\n  Modify existing code"}

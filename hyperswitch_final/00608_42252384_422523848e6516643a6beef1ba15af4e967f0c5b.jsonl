@@ -1,1 +1,0 @@
-{"prompt": "build(deps): address `undeclared crate or module` errors on Windows for `scheduler` crate (#2411)", "response": "Files to modify:\n\n\n**utils.rs**\n  Remove:\n    - function: pub::signal_handler"}

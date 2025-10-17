@@ -1,1 +1,0 @@
-{"prompt": "feat(db): add find_config_by_key_unwrap_or (#2214)", "response": "Files to modify:\n\n\n**configs.rs**\n  Add:\n    - function: private::find_config_by_key_unwrap_or\n    - function: private::find_config_by_key_unwrap_or"}

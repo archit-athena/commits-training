@@ -1,1 +1,0 @@
-{"prompt": "refactor(router): add openapi spec support for merchant_connector apis (#2997)", "response": "Files to modify:\n\n\n**openapi.rs**\n  Modify existing code\n\n**admin.rs**\n  Modify existing code"}

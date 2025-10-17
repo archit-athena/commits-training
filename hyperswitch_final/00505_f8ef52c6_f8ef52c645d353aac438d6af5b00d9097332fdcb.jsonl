@@ -1,1 +1,0 @@
-{"prompt": "feat(docs): add multiple examples support and webhook schema (#1864)", "response": "Files to modify:\n\n\n**webhooks.rs**\n  Modify existing code\n\n**enums.rs**\n  Modify existing code\n\n**lib.rs**\n  Modify existing code\n\n**openapi.rs**\n  Add:\n    - mod: pub::examples\n\n**payments.rs**\n  Modify existing code"}

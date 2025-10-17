@@ -1,1 +1,0 @@
-{"prompt": "docs: add `ApplePayRedirectionData` to OpenAPI schema (#1386)", "response": "Files to modify:\n\n\n**openapi.rs**\n  Modify existing code"}

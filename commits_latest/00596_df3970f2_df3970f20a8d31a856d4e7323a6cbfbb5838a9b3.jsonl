@@ -1,1 +1,0 @@
-{"prompt": "fix(core): Address 500 when deleting payment method and add logs to postman collections (#1695)\n\nCo-authored-by: pixincreate@work <69745008+pixincreate@users.noreply.github.co>", "response": "Files to modify:\n\n\n**cards.rs**\n  Modify existing code"}

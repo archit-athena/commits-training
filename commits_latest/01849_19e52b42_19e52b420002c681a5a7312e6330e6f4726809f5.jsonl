@@ -1,1 +1,0 @@
-{"prompt": "fix: log detailed error reports during deep health check failures (#5984)", "response": "Files to modify:\n\n\n**health_check.rs**\n  Modify existing code\n\n**scheduler.rs**\n  Modify existing code\n\n**health.rs**\n  Modify existing code"}

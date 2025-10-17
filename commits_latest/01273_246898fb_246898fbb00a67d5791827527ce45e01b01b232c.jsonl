@@ -1,1 +1,0 @@
-{"prompt": "fix(euclid_wasm): checkout wasm metadata issue (#4198)\n\nCo-authored-by: Arjun Karthik <m.arjunkarthik@gmail.com>", "response": "Files to modify:\n\n\n**common_config.rs**\n  Modify existing code\n\n**response_modifier.rs**\n  Modify existing code\n\n**transformer.rs**\n  Modify existing code"}

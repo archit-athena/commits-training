@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): [Multisafepay] Add support for Ideal and Giropay  (#4398)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - function: private::try_from\n    - struct: pub::IdealInfo\n    - enum: pub::BankRedirectInfo\n    - enum: pub::MultisafepayBankNames\n    - impl: impl TryFrom<&BankNames> for MultisafepayBankNames"}

@@ -1,1 +1,0 @@
-{"prompt": "fix(router/scheduler): replace the occurrences of gen_range with a safer alternative (#2126)", "response": "Files to modify:\n\n\n**utils.rs**\n  Modify existing code\n\n**consumer.rs**\n  Modify existing code\n\n**producer.rs**\n  Modify existing code"}

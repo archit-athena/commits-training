@@ -1,1 +1,0 @@
-{"prompt": "fix(payout): use get_string_repr for formatting payout IDs (#8547)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**payouts.rs**\n  Modify existing code"}

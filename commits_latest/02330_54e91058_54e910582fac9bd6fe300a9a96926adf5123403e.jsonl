@@ -1,1 +1,0 @@
-{"prompt": "feat(users): profile level custom role write (#7877)", "response": "Files to modify:\n\n\n**role.rs**\n  Modify existing code\n\n**schema.rs**\n  Modify existing code\n\n**schema_v2.rs**\n  Modify existing code\n\n**role.rs**\n  Modify existing code\n\n**role.rs**\n  Modify existing code"}

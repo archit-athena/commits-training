@@ -1,1 +1,0 @@
-{"prompt": "feat(payment_attempt): add kv for find last successful attempt (#2206)", "response": "Files to modify:\n\n\n**cache.rs**\n  Modify existing code\n\n**reverse_lookup.rs**\n  Modify existing code\n\n**lookup.rs**\n  Modify existing code\n\n**payment_attempt.rs**\n  Modify existing code\n\n**cache.rs**\n  Modify existing code"}

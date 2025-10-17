@@ -1,1 +1,0 @@
-{"prompt": "chore(eulid_wasm): allow merchant to select different paypal paymentmenthod type (#4882)", "response": "Files to modify:\n\n\n**common_config.rs**\n  Modify existing code\n\n**response_modifier.rs**\n  Modify existing code\n\n**transformer.rs**\n  Remove:\n    - function: pub::transform_paypal_payment_method"}

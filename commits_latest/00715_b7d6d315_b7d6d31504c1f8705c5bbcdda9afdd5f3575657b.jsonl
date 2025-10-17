@@ -1,1 +1,0 @@
-{"prompt": "fix(router): correct limit for payments list by filters (#2060)", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**consts.rs**\n  Modify existing code\n\n**payment_intent.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code\n\n**helpers.rs**\n  Modify existing code"}

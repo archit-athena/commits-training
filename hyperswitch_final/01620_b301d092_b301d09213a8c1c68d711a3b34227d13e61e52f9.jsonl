@@ -1,1 +1,0 @@
-{"prompt": "chore(wasm): add wasm changes for ctp_mastercard connector (#6838)", "response": "Files to modify:\n\n\n**common_config.rs**\n  Modify existing code\n\n**connector.rs**\n  Modify existing code"}

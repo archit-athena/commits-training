@@ -1,1 +1,0 @@
-{"prompt": "fix: Error Mapping for Bluensap & Card Number for Airwallex (#686)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code\n\n**bluesnap.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

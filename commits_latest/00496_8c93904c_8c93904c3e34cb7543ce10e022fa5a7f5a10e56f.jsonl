@@ -1,1 +1,0 @@
-{"prompt": "feat(db): implement `EphemeralKeyInterface` for `MockDb` (#1285)", "response": "Files to modify:\n\n\n**db.rs**\n  Modify existing code\n\n**ephemeral_key.rs**\n  Modify existing code\n\n**storage.rs**\n  Modify existing code"}

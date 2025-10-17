@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): accept state abbreviation in 2 letter (#4646)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**enums.rs**\n  Modify existing code\n\n**utils.rs**\n  Modify existing code"}

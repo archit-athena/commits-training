@@ -1,1 +1,0 @@
-{"prompt": "refactor(metrics): use macros for constructing counter and histogram metrics (#755)", "response": "Files to modify:\n\n\n**metrics.rs**\n  Modify existing code\n\n**metrics.rs**\n  Modify existing code\n\n**metrics.rs**\n  Modify existing code\n\n**lib.rs**\n  Add:\n    - mod: pub::metrics\n\n**metrics.rs**\n  Modify existing code"}

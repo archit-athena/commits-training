@@ -1,1 +1,0 @@
-{"prompt": "feat(subscription): Add estimate to subscriptions flow and remove amount and currency (#9835)", "response": "Files to modify:\n\n\n**subscription.rs**\n  Modify existing code\n\n**subscription.rs**\n  Modify existing code\n\n**invoice_handler.rs**\n  Modify existing code"}

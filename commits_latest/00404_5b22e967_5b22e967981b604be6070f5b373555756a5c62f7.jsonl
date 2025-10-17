@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): [Stripe] implement Bancontact Bank Redirect for stripe  (#1169)\n\nCo-authored-by: Jagan <jaganelavarasan@gmail.com>", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

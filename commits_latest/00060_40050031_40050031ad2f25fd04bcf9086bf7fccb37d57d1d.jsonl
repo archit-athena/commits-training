@@ -1,1 +1,0 @@
-{"prompt": "fix(router): connecconnector name not saved in payment_attempt & connector_response tables (#143)", "response": "Files to modify:\n\n\n**payment_response.rs**\n  Modify existing code\n\n**connector_response.rs**\n  Modify existing code\n\n**payment_attempt.rs**\n  Modify existing code"}

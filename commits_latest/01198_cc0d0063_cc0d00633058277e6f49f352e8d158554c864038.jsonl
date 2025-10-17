@@ -1,1 +1,0 @@
-{"prompt": "chore: adding addition fields from psql to kafka event for analytics usecase (#3815)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>\nCo-authored-by: Sampras Lopes <lsampras@pm.me>", "response": "Files to modify:\n\n\n**payment_attempt.rs**\n  Modify existing code"}

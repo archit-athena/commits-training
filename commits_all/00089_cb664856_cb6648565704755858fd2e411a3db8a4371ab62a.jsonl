@@ -1,1 +1,0 @@
-{"prompt": "fix(router): remove 'connectors_pecking_order' from readmes and tests (#397)", "response": "Files to modify:\n\n\n**utils.rs**\n  Modify existing code"}

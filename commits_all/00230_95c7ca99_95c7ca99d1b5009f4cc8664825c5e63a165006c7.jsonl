@@ -1,1 +1,0 @@
-{"prompt": "feat(router): implement `ApiKeyInterface` for `MockDb` (#1101)\n\nCo-authored-by: Derek Leverenz <derel@dereleverenz.com>\nCo-authored-by: Sanchith Hegde <22217505+SanchithHegde@users.noreply.github.com>", "response": "Files to modify:\n\n\n**db.rs**\n  Modify existing code\n\n**api_keys.rs**\n  Modify existing code\n\n**api_keys.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): [noon] add connector_auth params and update description (#2429)", "response": "Files to modify:\n\n\n**settings.rs**\n  Add:\n    - struct: pub::ConnectorParamsWithModeType\n\n**noon.rs**\n  Remove:\n    - function: private::get_auth_header\n  Add:\n    - function: private::get_auth_header\n\n**transformers.rs**\n  Modify existing code"}

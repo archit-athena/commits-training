@@ -1,1 +1,0 @@
-{"prompt": "fix(router): add choice to use the appropriate key for jws verification (#2917)\n\nCo-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**cards.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

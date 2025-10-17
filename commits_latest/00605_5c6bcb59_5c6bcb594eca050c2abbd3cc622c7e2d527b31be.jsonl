@@ -1,1 +1,0 @@
-{"prompt": "Fix(connector): [Bluesnap] Populate Error Reason and Update error handling (#1787)", "response": "Files to modify:\n\n\n**bluesnap.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

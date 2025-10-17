@@ -1,1 +1,0 @@
-{"prompt": "feat(ci): add vector to handle logs pipeline (#5021)", "response": "Files to modify:\n\n\n**clickhouse.rs**\n  Modify existing code"}

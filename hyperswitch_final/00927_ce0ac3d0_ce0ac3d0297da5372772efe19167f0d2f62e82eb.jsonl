@@ -1,1 +1,0 @@
-{"prompt": "fix(webhooks): abort outgoing webhook retry task if webhook URL is not available in business profile (#3997)", "response": "Files to modify:\n\n\n**errors.rs**\n  Add:\n    - function: pub::is_webhook_delivery_retryable_error\n    - impl: impl WebhooksFlowError\n\n**webhooks.rs**\n  Add:\n    - function: private::get_webhook_url_from_business_profile"}

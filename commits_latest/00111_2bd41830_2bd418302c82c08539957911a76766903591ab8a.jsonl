@@ -1,1 +1,0 @@
-{"prompt": "fix(authorizedotnet): payments resposne parsing fix (#290)", "response": "Files to modify:\n\n\n**authorizedotnet.rs**\n  Modify existing code\n\n**transformers.rs**\n  Remove:\n    - enum: pub::AuthorizedotnetPaymentStatus\n    - mod: private::status\n  Add:\n    - enum: pub::AuthorizedotnetPaymentStatus"}

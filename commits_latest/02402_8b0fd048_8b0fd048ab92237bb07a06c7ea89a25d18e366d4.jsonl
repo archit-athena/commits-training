@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): Connector Feature Matrix Bugfix (#8047)", "response": "Files to modify:\n\n\n**bluesnap.rs**\n  Modify existing code\n\n**fiserv.rs**\n  Modify existing code\n\n**inespay.rs**\n  Modify existing code\n\n**shift4.rs**\n  Modify existing code\n\n**stax.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "fix(pm_list): [Trustpay] Update Cards, Bank_redirect - blik pm type required field info for Trustpay (#2999)\n\nCo-authored-by: Arjun Karthik <m.arjunkarthik@gmail.com>", "response": "Files to modify:\n\n\n**defaults.rs**\n  Modify existing code"}

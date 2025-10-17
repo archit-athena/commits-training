@@ -1,1 +1,0 @@
-{"prompt": "feat(router): allow enabling/disabling of outgoing webhooks based on env configuration (#476)", "response": "Files to modify:\n\n\n**settings.rs**\n  Add:\n    - struct: pub::WebhooksSettings\n\n**webhooks.rs**\n  Modify existing code"}

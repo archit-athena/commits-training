@@ -1,1 +1,0 @@
-{"prompt": "fix: Restricting operation on redacted customer (#289)", "response": "Files to modify:\n\n\n**customers.rs**\n  Modify existing code\n\n**errors.rs**\n  Modify existing code\n\n**utils.rs**\n  Modify existing code\n\n**customers.rs**\n  Modify existing code"}

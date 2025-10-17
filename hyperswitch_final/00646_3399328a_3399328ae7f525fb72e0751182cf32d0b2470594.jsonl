@@ -1,1 +1,0 @@
-{"prompt": "refactor(router): remove unnecessary function from Refunds Validate Flow (#2609)\n\nCo-authored-by: Aaron Jackson <aaronjackson@Aarons-MBP.attlocal.net>", "response": "Files to modify:\n\n\n**refunds.rs**\n  Modify existing code\n\n**validator.rs**\n  Remove:\n    - function: pub::validate_uniqueness_of_refund_id_against_merchant_id"}

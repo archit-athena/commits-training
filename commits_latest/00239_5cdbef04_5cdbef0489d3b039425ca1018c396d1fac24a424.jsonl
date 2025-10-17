@@ -1,1 +1,0 @@
-{"prompt": "bugfix(refunds): skip validate refunds for card (#672)", "response": "Files to modify:\n\n\n**validator.rs**\n  Modify existing code"}

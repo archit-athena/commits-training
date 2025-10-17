@@ -1,1 +1,0 @@
-{"prompt": "refactor(router): api-key routes refactoring (#600)", "response": "Files to modify:\n\n\n**api_keys.rs**\n  Remove:\n    - function: private::get_merchant_id_header\n\n**app.rs**\n  Modify existing code\n\n**authentication.rs**\n  Modify existing code"}

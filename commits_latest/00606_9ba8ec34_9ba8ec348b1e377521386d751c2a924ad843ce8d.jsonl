@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): [Stripe, Adyen, Checkout] Add reference ID support for retries (#1735)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

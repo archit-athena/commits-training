@@ -1,1 +1,0 @@
-{"prompt": "refactor(connector): [Noon] Remove Default Case Handling (#2677)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

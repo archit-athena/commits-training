@@ -1,1 +1,0 @@
-{"prompt": "build(deps): bump `diesel` from `2.0.3` to `2.1.0` (#1287)", "response": "Files to modify:\n\n\n**pii.rs**\n  Modify existing code\n\n**diesel.rs**\n  Modify existing code\n\n**api_keys.rs**\n  Modify existing code\n\n**enums.rs**\n  Modify existing code\n\n**lib.rs**\n  Modify existing code\n\n**schema.rs**\n  Modify existing code"}

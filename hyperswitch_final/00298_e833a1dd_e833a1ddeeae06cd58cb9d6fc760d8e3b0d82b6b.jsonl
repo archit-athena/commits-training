@@ -1,1 +1,0 @@
-{"prompt": "fix(connector_customer): create connector_customer on requirement basis (#1097)", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**customers.rs**\n  Modify existing code\n\n**flows.rs**\n  Modify existing code\n\n**authorize_flow.rs**\n  Modify existing code\n\n**verfiy_flow.rs**\n  Modify existing code"}

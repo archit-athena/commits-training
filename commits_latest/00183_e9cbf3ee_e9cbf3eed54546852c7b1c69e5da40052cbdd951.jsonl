@@ -1,1 +1,0 @@
-{"prompt": "feat: Add crate attribute to operation macro (#459)", "response": "Files to modify:\n\n\n**operation.rs**\n  Modify existing code"}

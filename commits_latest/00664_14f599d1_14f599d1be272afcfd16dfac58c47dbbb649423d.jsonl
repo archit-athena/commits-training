@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): [ACI] Response Handling in case of `ErrorResponse` (#1870)", "response": "Files to modify:\n\n\n**aci.rs**\n  Add:\n    - function: private::build_error_response\n\n**transformers.rs**\n  Add:\n    - struct: pub::AciErrorResponse"}

@@ -1,1 +1,0 @@
-{"prompt": "fix(external_services): add proto build under the dynamic_routing feature flag (#5945)", "response": "Files to modify:\n\n\n**build.rs**\n  Modify existing code\n\n**dynamic_routing.rs**\n  Modify existing code"}

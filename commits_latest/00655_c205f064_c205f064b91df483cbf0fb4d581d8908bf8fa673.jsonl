@@ -1,1 +1,0 @@
-{"prompt": "feat(pm_list): add pm required field info for crypto pay (#1891)", "response": "Files to modify:\n\n\n**enums.rs**\n  Modify existing code\n\n**defaults.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): adyen connector creates connector's customer reference on the fly fixed (#8447)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

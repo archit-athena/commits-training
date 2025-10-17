@@ -1,1 +1,0 @@
-{"prompt": "feat(core): Fix Applepay/Gpay for Trustpay (#8881)", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code"}

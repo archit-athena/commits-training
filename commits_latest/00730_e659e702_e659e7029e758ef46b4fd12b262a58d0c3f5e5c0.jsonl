@@ -1,1 +1,0 @@
-{"prompt": "refactor(connector): [Stripe] Using `connector_request_reference_id` as object_reference_id for Webhooks (#2064)", "response": "Files to modify:\n\n\n**stripe.rs**\n  Modify existing code\n\n**transformers.rs**\n  Remove:\n    - struct: pub::StripeMetadata\n  Add:\n    - struct: pub::StripeMetadata"}

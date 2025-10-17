@@ -1,1 +1,0 @@
-{"prompt": "fix(compatibility): add last_payment_error in stripe payment response (#803)", "response": "Files to modify:\n\n\n**types.rs**\n  Add:\n    - struct: pub::LastPaymentError"}

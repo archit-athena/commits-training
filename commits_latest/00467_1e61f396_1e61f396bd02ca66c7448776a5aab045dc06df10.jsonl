@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): add request & response logs for top 4 connector (#1427)", "response": "Files to modify:\n\n\n**bluesnap.rs**\n  Modify existing code\n\n**checkout.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**stripe.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code\n\n**zen.rs**\n  Modify existing code"}

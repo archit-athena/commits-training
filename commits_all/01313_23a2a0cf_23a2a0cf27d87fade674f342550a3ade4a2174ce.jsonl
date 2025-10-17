@@ -1,1 +1,0 @@
-{"prompt": "chore: update payment method configs for globalpay (#7512)", "response": "Files to modify:\n\n\n**enums.rs**\n  Add:\n    - function: private::is_four_decimal_currency\n\n**types.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

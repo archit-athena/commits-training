@@ -1,1 +1,0 @@
-{"prompt": "docs(openapi): fix `payment_methods_enabled` OpenAPI spec in merchant connector account APIs (#3068)", "response": "Files to modify:\n\n\n**admin.rs**\n  Modify existing code\n\n**payment_methods.rs**\n  Modify existing code\n\n**openapi.rs**\n  Modify existing code"}

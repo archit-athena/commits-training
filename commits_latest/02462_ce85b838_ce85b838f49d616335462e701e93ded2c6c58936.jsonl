@@ -1,1 +1,0 @@
-{"prompt": "docs(openapi): Show API version selection dropdown in Mintlify (#8333)", "response": "Files to modify:\n\n\n**main.rs**\n  Modify existing code"}

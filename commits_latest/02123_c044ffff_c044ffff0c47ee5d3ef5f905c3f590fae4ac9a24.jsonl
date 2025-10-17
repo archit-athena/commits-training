@@ -1,1 +1,0 @@
-{"prompt": "chore(connector): [Fiuu] log keys in the PSync response (#7189)", "response": "Files to modify:\n\n\n**fiuu.rs**\n  Add:\n    - function: pub::parse_and_log_keys_in_url_encoded_response"}

@@ -1,1 +1,0 @@
-{"prompt": "fix: resolve fixmes in `router/scheduler` (#269)", "response": "Files to modify:\n\n\n**consumer.rs**\n  Modify existing code\n\n**producer.rs**\n  Modify existing code\n\n**utils.rs**\n  Add:\n    - function: pub::lock_acquire_release"}

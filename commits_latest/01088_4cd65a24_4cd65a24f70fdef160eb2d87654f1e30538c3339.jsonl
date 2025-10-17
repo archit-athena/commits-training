@@ -1,1 +1,0 @@
-{"prompt": "Refactor(Router): [Noon] revert adding new field max_amount to mandate request  (#3435)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

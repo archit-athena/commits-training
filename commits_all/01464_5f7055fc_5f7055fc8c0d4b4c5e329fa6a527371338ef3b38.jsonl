@@ -1,1 +1,0 @@
-{"prompt": "fix(connectors): [worldpayvantiv] change endpoint, add billing address and fix 5xx incase of psync (#8354)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - struct: pub::BillToAddressData\n    - struct: pub::FraudResult"}

@@ -1,1 +1,0 @@
-{"prompt": "fix: few fields were not getting updated in apply_changeset function (#3002)", "response": "Files to modify:\n\n\n**business_profile.rs**\n  Modify existing code\n\n**capture.rs**\n  Modify existing code\n\n**payment_attempt.rs**\n  Modify existing code\n\n**payment_intent.rs**\n  Modify existing code\n\n**refund.rs**\n  Modify existing code"}

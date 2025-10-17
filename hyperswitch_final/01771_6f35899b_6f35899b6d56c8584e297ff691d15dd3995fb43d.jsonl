@@ -1,1 +1,0 @@
-{"prompt": "feat(payment-link): emit intent status to parent before rendering payment link UI (#7531)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**payment_link.rs**\n  Modify existing code"}

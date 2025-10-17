@@ -1,1 +1,0 @@
-{"prompt": "refactor(connector): [Payme] Response Handling for Preprocessing (#2097)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "fix(openapi): Fix broken mintlify pages (v2) (#8382)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**tokenization.rs**\n  Modify existing code"}

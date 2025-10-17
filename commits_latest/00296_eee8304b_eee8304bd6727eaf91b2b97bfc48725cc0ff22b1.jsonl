@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): [Mollie] remove unsupported implementation of Void flow from mollie connector (#808)", "response": "Files to modify:\n\n\n**mollie.rs**\n  Remove:\n    - function: private::get_headers\n    - function: private::get_url"}

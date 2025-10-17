@@ -1,1 +1,0 @@
-{"prompt": "fix(connectors): Amount received should be zero for `pending` and `failed` status (#4331)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

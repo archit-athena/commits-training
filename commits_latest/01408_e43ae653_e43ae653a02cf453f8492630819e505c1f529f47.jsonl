@@ -1,1 +1,0 @@
-{"prompt": "refactor(payment_methods): update api contract for update payment method endpoint (#4641)", "response": "Files to modify:\n\n\n**payment_methods.rs**\n  Modify existing code\n\n**payment_method.rs**\n  Modify existing code\n\n**cards.rs**\n  Modify existing code"}

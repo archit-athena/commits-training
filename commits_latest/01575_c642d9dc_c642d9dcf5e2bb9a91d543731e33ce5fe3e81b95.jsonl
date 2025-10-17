@@ -1,1 +1,0 @@
-{"prompt": "feat(router): pass fields to indicate if the customer address details to be connector from wallets (#5210)", "response": "Files to modify:\n\n\n**payment_methods.rs**\n  Modify existing code\n\n**cards.rs**\n  Modify existing code\n\n**session_flow.rs**\n  Modify existing code"}

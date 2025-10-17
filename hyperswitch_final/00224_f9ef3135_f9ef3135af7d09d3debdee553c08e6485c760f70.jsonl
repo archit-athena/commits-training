@@ -1,1 +1,0 @@
-{"prompt": "refactor(api_models): enhance accepted countries/currencies types (#807)", "response": "Files to modify:\n\n\n**admin.rs**\n  Remove:\n    - struct: pub::AcceptedCurrencies\n  Add:\n    - enum: pub::AcceptedCurrencies\n\n**enums.rs**\n  Modify existing code\n\n**payment_methods.rs**\n  Modify existing code\n\n**cards.rs**\n  Modify existing code"}

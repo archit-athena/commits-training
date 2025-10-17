@@ -1,1 +1,0 @@
-{"prompt": "refactor: alter subscription table to update primary key (#9272)", "response": "Files to modify:\n\n\n**schema.rs**\n  Modify existing code\n\n**schema_v2.rs**\n  Modify existing code\n\n**subscription.rs**\n  Modify existing code"}

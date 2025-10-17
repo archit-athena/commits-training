@@ -1,1 +1,0 @@
-{"prompt": "feat(scheduler): default connector mapping for adding process", "response": "Files to modify:\n\n\n**process_data.rs**\n  Add:\n    - function: pub::default\n    - impl: impl ConnectorPTMapping\n\n**payment_sync.rs**\n  Modify existing code"}

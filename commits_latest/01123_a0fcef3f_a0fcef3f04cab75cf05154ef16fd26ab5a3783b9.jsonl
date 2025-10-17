@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): [NMI] Handle empty response in psync and error response in complete authorize (#3548)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Remove:\n    - enum: pub::CardHolderAuthType\n\n**api.rs**\n  Modify existing code"}

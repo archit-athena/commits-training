@@ -1,1 +1,0 @@
-{"prompt": "feat: add docs for PaymentsRequest & PaymentsResponse (#385)", "response": "Files to modify:\n\n\n**admin.rs**\n  Modify existing code\n\n**enums.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code\n\n**openapi.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code"}

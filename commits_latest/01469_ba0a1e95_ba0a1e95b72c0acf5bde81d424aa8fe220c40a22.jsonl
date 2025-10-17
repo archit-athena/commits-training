@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): [Adyen]add required fields for afterpay clearpay (#4858)", "response": "Files to modify:\n\n\n**defaults.rs**\n  Modify existing code"}

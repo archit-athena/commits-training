@@ -1,1 +1,0 @@
-{"prompt": "fix(routing): cache redaction on updation of mca (#9729)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**admin.rs**\n  Modify existing code\n\n**helpers.rs**\n  Remove:\n    - function: pub::update_default_fallback_on_mca_update"}

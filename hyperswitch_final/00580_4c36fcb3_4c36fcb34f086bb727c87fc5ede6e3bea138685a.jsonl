@@ -1,1 +1,0 @@
-{"prompt": "refactor(router): add camel_case for the applepay request (#2172)", "response": "Files to modify:\n\n\n**verifications.rs**\n  Modify existing code\n\n**verification.rs**\n  Modify existing code"}

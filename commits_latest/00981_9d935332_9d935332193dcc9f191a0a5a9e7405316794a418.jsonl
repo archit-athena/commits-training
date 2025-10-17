@@ -1,1 +1,0 @@
-{"prompt": "feat(pm_list): Add required field for open_banking_uk for Adyen and Volt Connector  (#3032)\n\nCo-authored-by: Prasunna Soppa <70575890+prasunna09@users.noreply.github.com>", "response": "Files to modify:\n\n\n**defaults.rs**\n  Modify existing code"}

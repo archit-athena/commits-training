@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): use enum to deserialize latest_charge in stripe psync response (#2444)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Add:\n    - enum: pub::StripeChargeEnum"}

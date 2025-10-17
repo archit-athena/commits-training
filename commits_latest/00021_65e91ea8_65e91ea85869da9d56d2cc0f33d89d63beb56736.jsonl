@@ -1,1 +1,0 @@
-{"prompt": "feat(verify): add new types for validate API (#45)", "response": "Files to modify:\n\n\n**payment_session.rs**\n  Modify existing code\n\n**types.rs**\n  Add:\n    - struct: pub::VerifyRequestData\n\n**payments.rs**\n  Add:\n    - struct: pub::VerifyRequest\n    - struct: pub::VerifyResponse"}

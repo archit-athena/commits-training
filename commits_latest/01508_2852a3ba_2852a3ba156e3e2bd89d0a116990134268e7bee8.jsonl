@@ -1,1 +1,0 @@
-{"prompt": "fix(users): Magic link is not expiring after one usage (#4971)", "response": "Files to modify:\n\n\n**user.rs**\n  Modify existing code\n\n**user.rs**\n  Modify existing code\n\n**decision_manager.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "refactor(redis): spawn one subscriber thread for handling all the published messages to different channel (#5064)", "response": "Files to modify:\n\n\n**lib.rs**\n  Modify existing code\n\n**configs.rs**\n  Modify existing code\n\n**services.rs**\n  Modify existing code\n\n**cache.rs**\n  Modify existing code\n\n**pub_sub.rs**\n  Modify existing code"}

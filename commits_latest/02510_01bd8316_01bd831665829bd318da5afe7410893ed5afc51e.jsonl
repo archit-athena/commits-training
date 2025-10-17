@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): `multisafepay` added payment methods | TRUSTLY | WeChatpay | Alipay (#8465)", "response": "Files to modify:\n\n\n**multisafepay.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - struct: pub::WeChatPayInfo\n    - struct: pub::AlipayInfo\n    - struct: pub::TrustlyInfo"}

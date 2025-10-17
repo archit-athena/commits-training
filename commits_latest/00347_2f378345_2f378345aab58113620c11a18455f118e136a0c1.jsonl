@@ -1,1 +1,0 @@
-{"prompt": "fix: different parent payment method token for different payment me… (#982)", "response": "Files to modify:\n\n\n**cards.rs**\n  Modify existing code"}

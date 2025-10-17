@@ -1,1 +1,0 @@
-{"prompt": "build(deps): use `async-bb8-diesel` from `crates.io` instead of git repository (#2619)\n\nCo-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**generics.rs**\n  Modify existing code\n\n**payment_intent.rs**\n  Modify existing code"}

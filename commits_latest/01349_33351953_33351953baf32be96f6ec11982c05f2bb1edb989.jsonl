@@ -1,1 +1,0 @@
-{"prompt": "refactor(scheduler): join frequency and count in `RetryMapping` (#4313)", "response": "Files to modify:\n\n\n**payment_sync.rs**\n  Modify existing code\n\n**process_data.rs**\n  Modify existing code\n\n**utils.rs**\n  Modify existing code"}

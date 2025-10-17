@@ -1,1 +1,0 @@
-{"prompt": "refactor: add compatibility for decision-engine rules (#8346)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**errors.rs**\n  Modify existing code\n\n**utils.rs**\n  Modify existing code\n\n**routing.rs**\n  Modify existing code"}

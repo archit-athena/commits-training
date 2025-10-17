@@ -1,1 +1,0 @@
-{"prompt": "fix: payment_method_data and description null during payment confirm (#2618)\n\nCo-authored-by: Abhishek Marrivagu <68317979+Abhicodes-crypto@users.noreply.github.com>", "response": "Files to modify:\n\n\n**payment_attempt.rs**\n  Modify existing code\n\n**payment_intent.rs**\n  Modify existing code"}

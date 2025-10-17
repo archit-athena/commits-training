@@ -1,1 +1,0 @@
-{"prompt": "refactor(connector): [Worldpayvantiv] refactor void flow and handle transaction status (#8540)", "response": "Files to modify:\n\n\n**worldpayvantiv.rs**\n  Modify existing code\n\n**transformers.rs**\n  Remove:\n    - struct: pub::Void\n  Add:\n    - struct: pub::AuthReversal"}

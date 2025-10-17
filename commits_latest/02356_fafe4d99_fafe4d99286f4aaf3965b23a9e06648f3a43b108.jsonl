@@ -1,1 +1,0 @@
-{"prompt": "fix(update_metadata): Update Metadata for any connectors other than stripe gives 500 error (#7984)", "response": "Files to modify:\n\n\n**update_metadata_flow.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - function: pub::construct_payment_router_data_for_update_metadata"}

@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): add Samsung pay mandate support for Cybersource (#7298)", "response": "Files to modify:\n\n\n**cybersource.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - function: private::get_samsung_pay_payment_information\n\n**payment_connector_required_fields.rs**\n  Modify existing code"}

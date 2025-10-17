@@ -1,1 +1,0 @@
-{"prompt": "feat: add metrics to drainer (#497)", "response": "Files to modify:\n\n\n**lib.rs**\n  Add:\n    - function: pub::time_it\n\n**lib.rs**\n  Add:\n    - function: pub::time_it\n\n**metrics.rs**\n  Modify existing code\n\n**utils.rs**\n  Modify existing code\n\n**metrics.rs**\n  Modify existing code"}

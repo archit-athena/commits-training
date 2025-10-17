@@ -1,1 +1,0 @@
-{"prompt": "fix(deserialization): error message is different when invalid data is passed for payment method data (#4022)", "response": "Files to modify:\n\n\n**payments.rs**\n  Add:\n    - function: private::test_successful_card_deser\n    - function: private::test_successful_payment_method_reward\n    - mod: private::payments_request_api_contract"}

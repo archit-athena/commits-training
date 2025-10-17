@@ -1,1 +1,0 @@
-{"prompt": "fix: cache on multitenancy (#5561)", "response": "Files to modify:\n\n\n**types.rs**\n  Add:\n    - function: pub::from_bytes\n    - function: private::from\n    - impl: impl From<RedisValue> for FredRedisValue\n\n**cache.rs**\n  Add:\n    - struct: pub::CacheRedact\n\n**pub_sub.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "feat(test_utils): Add custom-headers and custom delay support to rustman (#2636)", "response": "Files to modify:\n\n\n**main.rs**\n  Modify existing code\n\n**newman_runner.rs**\n  Add:\n    - function: private::insert_content\n    - struct: pub::ReturnArgs"}

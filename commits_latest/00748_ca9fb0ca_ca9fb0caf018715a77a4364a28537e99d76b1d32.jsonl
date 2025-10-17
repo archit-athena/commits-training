@@ -1,1 +1,0 @@
-{"prompt": "fix(refactor): [Paypal] refactor paypal not implemented payment methods errors (#1974)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

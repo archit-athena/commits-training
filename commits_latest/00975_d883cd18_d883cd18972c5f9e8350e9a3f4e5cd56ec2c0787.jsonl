@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): [Paypal] Parse response for Cards with no 3DS check (#3021)", "response": "Files to modify:\n\n\n**paypal.rs**\n  Modify existing code\n\n**transformers.rs**\n  Remove:\n    - struct: pub::PaypalPreProcessingResponse\n  Add:\n    - struct: pub::PaypalLiabilityResponse\n    - enum: pub::PaypalPreProcessingResponse"}

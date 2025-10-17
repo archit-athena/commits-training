@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): [Iatapay] fix error response handling when payment is failed (#3197)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

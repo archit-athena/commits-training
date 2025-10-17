@@ -1,1 +1,0 @@
-{"prompt": "refactor(payments): attempt to address unintended 5xx and 4xx in payments (#1376)", "response": "Files to modify:\n\n\n**customers.rs**\n  Modify existing code\n\n**payments.rs**\n  Modify existing code\n\n**helpers.rs**\n  Modify existing code\n\n**authentication.rs**\n  Modify existing code"}

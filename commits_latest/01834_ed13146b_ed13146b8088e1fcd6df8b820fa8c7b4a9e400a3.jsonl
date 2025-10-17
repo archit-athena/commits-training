@@ -1,1 +1,0 @@
-{"prompt": "docs: api-reference changes for customers and admin list apis for v2 (#5936)", "response": "Files to modify:\n\n\n**customers.rs**\n  Modify existing code"}

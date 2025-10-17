@@ -1,1 +1,0 @@
-{"prompt": "refactor(core): filter default routing config response based on connector type (#7199)", "response": "Files to modify:\n\n\n**routing.rs**\n  Modify existing code"}

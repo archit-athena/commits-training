@@ -1,1 +1,0 @@
-{"prompt": "fix(router): validate each field for migration request body (#6525)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**cards.rs**\n  Modify existing code"}

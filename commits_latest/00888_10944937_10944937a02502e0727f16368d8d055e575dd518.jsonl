@@ -1,1 +1,0 @@
-{"prompt": "feat(events): add api auth type details to events (#2760)", "response": "Files to modify:\n\n\n**wrap.rs**\n  Modify existing code\n\n**api_logs.rs**\n  Modify existing code\n\n**api.rs**\n  Modify existing code\n\n**authentication.rs**\n  Add:\n    - function: pub::get_merchant_id\n    - enum: pub::AuthenticationType\n    - impl: impl AuthenticationType"}

@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): [AUTHORIZEDOTNET] customer id population fixed in authorize flow (#9079)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

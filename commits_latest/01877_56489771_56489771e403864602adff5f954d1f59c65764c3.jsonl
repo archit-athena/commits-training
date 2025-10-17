@@ -1,1 +1,0 @@
-{"prompt": "feat(router): add profile level auto retries config support (#6200)", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**retry.rs**\n  Add:\n    - function: pub::get_merchant_max_auto_retries_enabled\n    - function: pub::get_merchant_config_for_gsm"}

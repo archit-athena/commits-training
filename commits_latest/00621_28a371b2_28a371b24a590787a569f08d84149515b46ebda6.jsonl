@@ -1,1 +1,0 @@
-{"prompt": "fix(webhook): provide acknowledgment for webhooks with unsupported event types (#1815)", "response": "Files to modify:\n\n\n**utils.rs**\n  Add:\n    - function: private::allow_webhook_event_type_not_found\n\n**metrics.rs**\n  Modify existing code\n\n**webhooks.rs**\n  Modify existing code"}

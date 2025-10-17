@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): [AUTHORIZEDOTNET] Implement non-zero mandates (#4758)", "response": "Files to modify:\n\n\n**authorizedotnet.rs**\n  Add:\n    - function: private::validate_mandate_payment\n\n**transformers.rs**\n  Add:\n    - struct: pub::CreateProfileDetails\n    - struct: pub::CustomerDetails\n    - enum: private::ProfileDetails"}

@@ -1,1 +1,0 @@
-{"prompt": "feat(payouts): Add profile level payout filter API (#5808)", "response": "Files to modify:\n\n\n**payouts.rs**\n  Modify existing code\n\n**app.rs**\n  Modify existing code\n\n**payouts.rs**\n  Modify existing code"}

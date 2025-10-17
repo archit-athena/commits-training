@@ -1,1 +1,0 @@
-{"prompt": "feat(themes): Add email configuration support for themes (#7580)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**user.rs**\n  Modify existing code\n\n**user.rs**\n  Modify existing code\n\n**types.rs**\n  Modify existing code"}

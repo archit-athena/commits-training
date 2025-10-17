@@ -1,1 +1,0 @@
-{"prompt": "ci(ui_test): Refactor core of UI tests to use injected browser data (#2178)\n\nCo-authored-by: Jagan <jaganelavarasan@gmail.com>", "response": "Files to modify:\n\n\n**adyen_uk_ui.rs**\n  Modify existing code\n\n**bluesnap_ui.rs**\n  Modify existing code\n\n**selenium.rs**\n  Modify existing code\n\n**stripe_ui.rs**\n  Modify existing code"}

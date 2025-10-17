@@ -1,1 +1,0 @@
-{"prompt": "feat(users): Email JWT blacklist (#3659)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**user.rs**\n  Modify existing code\n\n**blacklist.rs**\n  Add:\n    - function: pub::insert_email_token_in_blacklist\n    - function: pub::check_email_token_in_blacklist"}

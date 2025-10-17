@@ -1,1 +1,0 @@
-{"prompt": "refactor(router): remove metadata, additional_merchant_data and connector_wallets_details from connector list api (#6583)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**admin.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

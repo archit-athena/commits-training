@@ -1,1 +1,0 @@
-{"prompt": "refactor(dynamic_routing): add info logs to log the grpc request and response (#6962)", "response": "Files to modify:\n\n\n**grpc_client.rs**\n  Add:\n    - function: pub::create_grpc_request\n\n**elimination_rate_client.rs**\n  Modify existing code\n\n**success_rate_client.rs**\n  Modify existing code\n\n**routing.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "chore(payments): filter NO_ERROR_CODE and NO_ERROR_MESSAGE from payments API response (#7801)", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

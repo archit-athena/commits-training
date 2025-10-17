@@ -1,1 +1,0 @@
-{"prompt": "refactor(connector): [Mifinity] fix redirection after payment completion and handle 5xx error  (#5250)", "response": "Files to modify:\n\n\n**mifinity.rs**\n  Modify existing code\n\n**api.rs**\n  Modify existing code"}

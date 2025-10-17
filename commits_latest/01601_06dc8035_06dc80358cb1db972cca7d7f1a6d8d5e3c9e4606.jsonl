@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): [Adyen] fix bank debit mandates for adyen (#5302)\n\nCo-authored-by: Chikke Srujan <chikke.srujan@Chikke-Srujan-N7WRTY72X7.local>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

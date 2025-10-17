@@ -1,1 +1,0 @@
-{"prompt": "feat(db): add fetch and update cache for admin table (#508)", "response": "Files to modify:\n\n\n**cache.rs**\n  Modify existing code\n\n**merchant_account.rs**\n  Modify existing code\n\n**merchant_account.rs**\n  Modify existing code"}

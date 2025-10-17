@@ -1,1 +1,0 @@
-{"prompt": "fix(core): fix failing token based MIT payments (#4735)", "response": "Files to modify:\n\n\n**payment_confirm.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "feat(nuvei): NTID Support + googlepay & applepay mandate support (#9081)", "response": "Files to modify:\n\n\n**nuvei.rs**\n  Modify existing code\n\n**transformers.rs**\n  Add:\n    - function: private::get_ntid\n    - function: private::get_ntid\n    - function: private::get_ntid\n    - struct: pub::ExternalSchemeDetails"}

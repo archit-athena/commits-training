@@ -1,1 +1,0 @@
-{"prompt": "refactor: send full payment object for payment sync (#526)\n\nCo-authored-by: Arun Raj M <jarnura47@gmail.com>", "response": "Files to modify:\n\n\n**payment_response.rs**\n  Modify existing code"}

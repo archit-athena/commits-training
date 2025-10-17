@@ -1,1 +1,0 @@
-{"prompt": "feat: Add redirect url to pm list (#404)", "response": "Files to modify:\n\n\n**payment_methods.rs**\n  Add:\n    - struct: pub::ListPaymentMethod\n\n**cards.rs**\n  Modify existing code\n\n**payment_methods.rs**\n  Add:\n    - struct: pub::ListPaymentMethod"}

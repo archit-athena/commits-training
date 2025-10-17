@@ -1,1 +1,0 @@
-{"prompt": "fix(connector): [Shift4] validate pretask for threeds cards  (#1428)\n\nSigned-off-by: chikke srujan <121822803+srujanchikke@users.noreply.github.com>\nCo-authored-by: SamraatBansal <55536657+SamraatBansal@users.noreply.github.com>", "response": "Files to modify:\n\n\n**shift4.rs**\n  Modify existing code"}

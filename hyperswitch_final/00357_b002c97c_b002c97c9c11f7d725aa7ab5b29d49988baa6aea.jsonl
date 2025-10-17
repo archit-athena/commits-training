@@ -1,1 +1,0 @@
-{"prompt": "feat(db): implement `MerchantConnectorAccountInterface` for `MockDb` (#1248)\n\nCo-authored-by: jeeva <jeeva.ramu@codurance.com>", "response": "Files to modify:\n\n\n**merchant_connector_account.rs**\n  Modify existing code\n\n**merchant_connector_account.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "feat(opensearch): add additional global search filters and create sessionizer indexes for local (#6352)", "response": "Files to modify:\n\n\n**opensearch.rs**\n  Modify existing code\n\n**search.rs**\n  Modify existing code\n\n**search.rs**\n  Modify existing code\n\n**opensearch.rs**\n  Modify existing code"}

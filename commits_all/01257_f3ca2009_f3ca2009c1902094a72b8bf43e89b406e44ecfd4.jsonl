@@ -1,1 +1,0 @@
-{"prompt": "refactor(utils): match string for state with SDK's naming convention (#7300)\n\nCo-authored-by: Debarati <debarati.ghatak@juspay.in>", "response": "Files to modify:\n\n\n**enums.rs**\n  Modify existing code\n\n**utils.rs**\n  Modify existing code"}

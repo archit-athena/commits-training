@@ -1,1 +1,0 @@
-{"prompt": "feat(db): implement `AddressInterface` for `MockDb` (#968)\n\nCo-authored-by: jeeva <jeeva.ramu@codurance.com>", "response": "Files to modify:\n\n\n**db.rs**\n  Modify existing code\n\n**address.rs**\n  Modify existing code\n\n**address.rs**\n  Modify existing code"}

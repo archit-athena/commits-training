@@ -1,1 +1,0 @@
-{"prompt": "refactor: [Noon] adding new field max_amount to mandate request (#3209)\n\nCo-authored-by: AkshayaFoiger <akshaya.shankar@juspay.in>\nCo-authored-by: AkshayaFoiger <131388445+AkshayaFoiger@users.noreply.github.com>", "response": "Files to modify:\n\n\n**transformers.rs**\n  Modify existing code"}

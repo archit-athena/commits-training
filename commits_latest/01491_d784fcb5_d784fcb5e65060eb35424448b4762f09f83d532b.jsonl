@@ -1,1 +1,0 @@
-{"prompt": "fix(payment_methods): filter the apple pay retryable connectors for a specific business profile with default fallback configuration (#4794)", "response": "Files to modify:\n\n\n**payments.rs**\n  Modify existing code\n\n**helpers.rs**\n  Modify existing code"}

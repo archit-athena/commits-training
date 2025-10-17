@@ -1,1 +1,0 @@
-{"prompt": "feat(connector): [Novalnet] Add support for disputes  (#6560)", "response": "Files to modify:\n\n\n**novalnet.rs**\n  Add:\n    - function: private::get_dispute_details\n\n**transformers.rs**\n  Add:\n    - function: pub::get_novalnet_dispute_status\n    - function: pub::option_to_result\n    - enum: pub::WebhookDisputeStatus"}

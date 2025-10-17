@@ -1,1 +1,0 @@
-{"prompt": "refactor(core): change primary keys in user, user_roles and roles tables (#5374)", "response": "Files to modify:\n\n\n**schema.rs**\n  Modify existing code\n\n**schema_v2.rs**\n  Modify existing code"}

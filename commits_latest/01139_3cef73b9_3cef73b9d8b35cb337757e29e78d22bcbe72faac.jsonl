@@ -1,1 +1,0 @@
-{"prompt": "fix(postman): Fix failing postman tests and send a proper error message (#3601)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**cards.rs**\n  Modify existing code\n\n**setup_mandate_flow.rs**\n  Modify existing code"}

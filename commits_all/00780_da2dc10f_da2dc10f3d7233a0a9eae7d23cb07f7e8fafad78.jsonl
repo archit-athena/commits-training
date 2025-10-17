@@ -1,1 +1,0 @@
-{"prompt": "refactor(bank-redirect): dynamic field changes for bankredirect payment method (#4650)", "response": "Files to modify:\n\n\n**defaults.rs**\n  Modify existing code"}

@@ -1,1 +1,0 @@
-{"prompt": "fix(router): [Adyen]  prevent partial submission of billing address and add required fields for all payment methods (#5660)\n\nCo-authored-by: hyperswitch-bot[bot] <148525504+hyperswitch-bot[bot]@users.noreply.github.com>", "response": "Files to modify:\n\n\n**defaults.rs**\n  Modify existing code\n\n**transformers.rs**\n  Modify existing code"}

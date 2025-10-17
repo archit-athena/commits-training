@@ -1,1 +1,0 @@
-{"prompt": "refactor(euclid): transform enum types to include sub-variants of payment method types (#8909)", "response": "Files to modify:\n\n\n**utils.rs**\n  Add:\n    - function: private::insert_dirvalue_param"}

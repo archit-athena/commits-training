@@ -1,1 +1,0 @@
-{"prompt": "build(deps): bump tonic version from 0.12 to 0.13 (#8461)", "response": "Files to modify:\n\n\n**build.rs**\n  Modify existing code\n\n**grpc_client.rs**\n  Modify existing code"}
