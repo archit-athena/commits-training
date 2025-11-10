@@ -6,115 +6,18 @@ Comprehensive documentation explaining what each file does, how it generates dat
 
 ## Table of Contents
 
-1. [Key Implementation Differences](#key-implementation-differences)
-2. [Data Generation Scripts](#1-data-generation-scripts)
-3. [Data Collection Scripts](#2-data-collection-scripts)
-4. [Data Merging & Transformation](#3-data-merging--transformation)
-5. [Training Scripts](#4-training-scripts)
-6. [Upload Utilities](#5-upload-utilities)
-7. [Testing & Exploration](#6-testing--exploration)
-8. [Services & APIs](#7-services--apis)
-9. [Comparison Matrix](#8-comparison-matrix)
+1. [Data Generation Scripts](#1-data-generation-scripts)
+2. [Data Collection Scripts](#2-data-collection-scripts)
+3. [Data Merging & Transformation](#3-data-merging--transformation)
+4. [Training Scripts](#4-training-scripts)
+5. [Upload Utilities](#5-upload-utilities)
+6. [Testing & Exploration](#6-testing--exploration)
+7. [Services & APIs](#7-services--apis)
+8. [Comparison Matrix](#8-comparison-matrix)
 
 ---
 
-## Key Implementation Differences
-
-### Data Generation Scripts
-
-**`generate.py`** (Tree-sitter + PyDriller):
-- Parsing: Tree-sitter AST for accurate identifier extraction
-- Extracts: functions, structs, enums, traits, impl blocks, mods
-- Tracks: visibility (pub/private), modifiers (async, unsafe, const)
-- Min lines filter: 10 (default)
-- Output: SFT/JSON/Patch formats
-- Pros: Accurate, detailed identifiers
-
-**`gen_ctx.py`** (Git show with context):
-- Uses: `git show -U<N>` directly via subprocess
-- Context: Configurable (default: 50 lines before/after)
-- Parsing: None - just extracts file-level changes
-- Min lines filter: 50 (default)
-- Output: JSONL + full context patch
-- Pros: More surrounding code, simpler, no dependencies
-
-**`gen_full.py`** (Best of Both):
-- Uses: Tree-sitter for parsing + git show for context
-- Gets default diff for parsing, full context diff for patches
-- Detailed identifiers: Functions/structs with visibility
-- Full context: 50 lines before/after
-- Dual patch generation
-- Pros: Comprehensive - both identifiers AND context
-
-### Data Collection Scripts
-
-**`gather_pr_issues.py`** (GitHub API Scraper):
-- Fetches: PRs with full patches + Issues
-- Extracts: Commit SHAs, linked issues, file changes
-- Features:
-  - Multi-token support (5000 req/hour per token)
-  - Auto token rotation on rate limit
-  - PR ↔ Issue linking via regex
-  - Full patch diffs
-- Output: prs.jsonl, issues.jsonl, summary.json
-
-### Data Merging & Transformation
-
-**`merge_datasets.py`** (SHA-based matching):
-- Matching: By commit SHA (full and short)
-- Uses: `enhanced_transformer.py` for patterns
-- Extracts: Architectural hierarchy, change types, intent
-- Combines: PR problem statement + arch patterns + identifiers
-- Limitation: SHA matching fails with squash/rebase
-
-**`smart_merge.py`** (PR number matching):
-- Matching: By PR number from commit message `(#1234)`
-- Uses regex: `\(#(\d+)\)` to extract PR number
-- Preserves: Full PR title + body in prompt
-- Same pattern extraction as merge_datasets.py
-- Advantage: More reliable than SHA (survives squash/rebase)
-
-**`enhanced_transformer.py`** (Pattern Extractor):
-- Extracts 3 key dimensions:
-  1. **File Hierarchy**: Groups files by layer (API/DB/domain/core/connectors)
-  2. **Change Types**: Counts structs/functions/fields/queries added
-  3. **Product Intent**: Detects feature type (search/payment/auth) + action (add/fix/enhance)
-- Transforms: Technical commits → product-focused queries
-- Creates: Digestible architectural explanations
-- No LLM required - rule-based extraction
-
-**`granular_generator.py`** (LLM-powered):
-- Two modes:
-  1. **Breakdown**: Splits large commits (5+ files) into smaller ones
-  2. **Transform**: Converts to product-focused format
-- Uses: vLLM API for LLM generation
-- Model: GLM-4.6-FP8 (default)
-- JSON parsing from LLM responses
-- Temperature: 0.3 (breakdown), 0.5 (transform)
-
-**`transform_to_natural.py`** (Natural Language):
-- Converts: Mechanical file lists → explanatory prose
-- LLM-powered with specific system prompt
-- Explains WHAT and WHY, not just HOW
-- Groups by architectural layer
-- Temperature: 0.3 for consistency
-
-### Which to Use?
-
-**For Maximum Identifier Detail + Context**:
-→ `gen_full.py` (tree-sitter parsing + 50-line context)
-
-**For Simple Context Only**:
-→ `gen_ctx.py` (fast, no dependencies, large context)
-
-**For Product-Level Training Data**:
-→ `gather_pr_issues.py` → `smart_merge.py` → `transform_to_natural.py`
-
-**For Quick Identifier Extraction**:
-→ `generate.py` (standard choice)
-
-**For LLM-Enhanced Datasets**:
-→ `granular_generator.py` (requires vLLM server)
+> **Note**: For key implementation differences between scripts, see [README.md](README.md)
 
 ---
 
